@@ -12,7 +12,7 @@ exports.bloom = bloom;
 
 const revamp = extend(PowerTurret, "revamp", {
   shootType: bul.revampPixel,
-  shootEffect: ef.smallShoot,
+  shootEffect: ef.smallHealShoot,
   smokeEffect: Fx.none,
   range: c.revampRange,
 });
