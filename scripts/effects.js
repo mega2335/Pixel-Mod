@@ -14,14 +14,18 @@ const bloomTrail = new Effect(20, e =>{
 	Draw.color(pal.brownLight, pal.brownDark, e.fin());
 	Fill.rect(e.x, e.y, 2, 2);
 });
+exports.bloomTrail = bloomTrail;
 
 const revampTrail = new Effect(20, e =>{
 	Draw.color(pal.greenLight, pal.greenDark, e.fin());
 	Fill.rect(e.x, e.y, 3.5, 3.5);
 });
+exports.revampTrail = revampTrail;
 
 const revampHit = new Effect(20, e =>{
 	Draw.color(pal.greenLight, pal.greenDark, e.fin());
     	Lines.stroke(e.fout() * 2);
     	Lines.square(e.x, e.y, 4 + e.finpow() * 20);
+	Lines.circle(e.x, e.y, 4 + e.finpow() * 20);
 });
+exports.revampHit = revampHit;
