@@ -32,7 +32,7 @@ const revampHit = new Effect(45, e =>{
 exports.revampHit = revampHit;
 
 const smallHealShoot = new Effect(50, e => {
-	Draw.color(pal.brownLight, pal.brownDark, e.fin());
+	Draw.color(pal.greenLight, pal.greenDark, e.fin());
 	const hl = new Floatc2({get: function(x, y){
 		Fill.rect(e.x + x, e.y + y, 2, 2);
 	}});
@@ -40,7 +40,8 @@ const smallHealShoot = new Effect(50, e => {
 	Angles.randLenVectors(e.id, 8, e.finpow() * 20.0, e.rotation, 30.0, hl);
 	
 	Lines.stroke(e.fout() * 2);
-	Lines.square(e.x, e.y, 7, Time.time * 2);
-	Lines.square(e.x, e.y, 7, Time.time * -2);
+	Lines.square(e.x, e.y, 2 + e.finpow() * 7, Time.time * 2);
+	Lines.square(e.x, e.y, 2 + e.finpow() * 7, Time.time * -2);
+	Lines.circle(e.x, e.y, 2 + e.finpow() * 7);
 });
 exports.smallHealShoot = smallHealShoot;
