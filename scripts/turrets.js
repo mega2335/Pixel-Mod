@@ -2,6 +2,17 @@ const ef = require("effects");
 const bul = require("bullets");
 const c = require("consts");
 
+
+const needle = extend(ItemTurret, "needle", {
+  shootEffect: ef.smallFireShoot,
+  smokeEffect: Fx.none,
+  range: c.needleRange,
+});
+needle.ammo(
+  Items.copper, bul.needleCopper
+)
+exports.needle = needle;
+
 const bloom = extend(PowerTurret, "bloom", {
   shootType: bul.bloomPixel,
   shootEffect: ef.smallShoot,
