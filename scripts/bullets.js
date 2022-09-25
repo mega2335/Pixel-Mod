@@ -43,8 +43,7 @@ const revampPixel = extend(BasicBulletType, {
 });
 exports.revampPixel = revampPixel;
 
-const needleCopper = extend(LaserBoltBulletType, {
-  backColor: pal.brownLight,
+const needleCopper = extend(BasicBulletType, {
   hitEffect: ef.smallHit,
   despawnEffect: Fx.none,
   despawnHit: true,
@@ -53,5 +52,11 @@ const needleCopper = extend(LaserBoltBulletType, {
   speed: 3.5,
   pierce: true,
   pierceCap: 2,
+  draw(b){
+    Draw.color(pal.brownLight)
+    Draw.z(Layer.bullet)
+    Lines.stroke(1)
+    Lines.lineAngleCenter(b.x, b.y, b.rotation, 5)
+  },
 });
 exports.needleCopper = needleCopper;
