@@ -55,8 +55,7 @@ const needleCopper = extend(BasicBulletType, {
   draw(b){
     Draw.color(pal.brownLight)
     Draw.z(Layer.bullet)
-    Lines.stroke(1)
-    Lines.lineAngleCenter(b.x, b.y, b.rotation, 5)
+    Drawf.tri(b.x, b.y, 1, 3, b.rotation)
   },
 });
 exports.needleCopper = needleCopper;
