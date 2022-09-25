@@ -8,3 +8,4 @@ const smallShoot = new Effect(50, e => {
 	
 	Angles.randLenVectors(e.id, 5, e.finpow() * 20.0, e.rotation, 30.0, hl);
 });
+exports.smallShoot = smallShoot;
