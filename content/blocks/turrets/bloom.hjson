@@ -1,0 +1,14 @@
+name: "Bloom"
+description: "Fires small pixels at all enemies nearby."
+details: "Forgotten tech. Remanants of an old war."
+recoil: 2.3
+reload: 50
+cooldownTime: 65
+health: 210
+research: scorch
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  lead/45
+  graphite/65
+]
