@@ -41,7 +41,7 @@ const revampPixel = extend(BasicBulletType, {
 exports.revampPixel = revampPixel;
 
 const needleCopper = extend(BasicBulletType, {
-  damage: 40,
+  damage: 20,
   lifetime: c.needleRange / 2,
   speed: 2,
   draw(b){
