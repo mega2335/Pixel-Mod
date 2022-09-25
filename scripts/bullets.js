@@ -22,8 +22,9 @@ const revampPixel = extend(BasicBulletType, {
   damage: 0,
   splashDamage: 90,
   splashDamageRadius: 20,
-  lifetime: c.bloomRange / 3,
+  lifetime: c.revampRange / 3,
   speed: 3,
+  healPercent: 3,
   draw(b){
     Draw.color(pal.brownLight)
     Draw.z(Layer.bullet)
