@@ -1,6 +1,7 @@
 name: "Bloom"
 description: "Fires small pixels at all enemies nearby."
 details: "Forgotten tech. Remanants of an old war."
+shootSound: bigshot // Now's your chance to be a [[BIG SHOT]]
 recoil: 2.3
 reload: 50
 cooldownTime: 65
