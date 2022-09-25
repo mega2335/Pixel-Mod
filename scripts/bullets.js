@@ -48,7 +48,7 @@ const needleCopper = extend(BasicBulletType, {
     Draw.color(Pal.bulletYellow);
     Draw.z(Layer.bullet);
     Lines.stroke(1.5);
-    Lines.lineAngleCenter(b.x, b.y, b.rotation(), 6);
+    Lines.lineAngleCenter(b.x, b.y, b.rotation, 5)
   },
 });
 exports.needleCopper = needleCopper;
