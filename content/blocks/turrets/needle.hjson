@@ -1,0 +1,15 @@
+name: "Needle"
+description: "Rapildy fires small needle-shaped bullets."
+shootSound: bigshot
+outlineRadius: 0
+recoil: 1.2
+reload: 6
+cooldownTime: 12
+health: 210
+research: duo
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  lead/45
+  copper/20
+]
