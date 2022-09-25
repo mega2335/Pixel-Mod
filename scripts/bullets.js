@@ -39,3 +39,16 @@ const revampPixel = extend(BasicBulletType, {
   despawnEffect: Fx.none,
 });
 exports.revampPixel = revampPixel;
+
+const needleCopper = extend(BasicBulletType, {
+  damage: 40,
+  lifetime: c.needleRange / 2,
+  speed: 2,
+  draw(b){
+    Draw.color(Pal.bulletYellow)
+    Draw.z(Layer.bullet)
+    Lines.stroke(1.5)
+    Lines.lineAngleCenter(b.x, b.y, b.rotation, 5)
+  },
+});
+exports.needleCopper = needleCopper;
