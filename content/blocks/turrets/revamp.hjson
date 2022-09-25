@@ -1,5 +1,6 @@
 name: "Revamp"
 description: "Fires structure-repairing volatile pixels at all enemies nearby."
+targetHealing: true
 shootSound: laser
 consumes: {
   power: 2.3
@@ -22,22 +23,22 @@ drawer: {
     }
     {
       suffix: "-blade"
-      moveY: -1.2
+      moveY: 1
       mirror: true
-      progress: recoil
+      progress: warmup
       under: true
     }
   ]
 }
 minWarmup: 0.85
-shootWarmupSpeed: 0.2
+shootWarmupSpeed: 0.1
+targetHealing: true
 rotateSpeed: 3.7
 health: 370
 research: bloom
 researchCostMultiplier: 1
 category: turret
 requirements: [
-  lead/80
   silicon/65
   graphite/30
   copper/15
