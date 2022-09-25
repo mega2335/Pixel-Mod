@@ -53,9 +53,26 @@ const needleCopper = extend(BasicBulletType, {
   pierce: true,
   pierceCap: 2,
   draw(b){
-    Draw.color(pal.brownLight)
+    Draw.color(Pal.bulletYellowBack)
     Draw.z(Layer.bullet)
-    Fill.tri(b.x, b.y, 1, 3, b.rotation)
+    Fill.rect(b.x, b.y, 2, 2)
   },
 });
 exports.needleCopper = needleCopper;
+
+const needleLead = extend(BasicBulletType, {
+  hitEffect: ef.smallHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  damage: 20,
+  lifetime: c.needleRange / 3,
+  speed: 3,
+  pierce: true,
+  pierceCap: 2,
+  draw(b){
+    Draw.color(Pal.darkMetal)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 2, 2)
+  },
+});
+exports.needleLead = needleLead;
