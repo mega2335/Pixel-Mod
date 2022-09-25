@@ -54,7 +54,7 @@ exports.smallHealShoot = smallHealShoot;
 
 const smallFireShoot = new Effect(20, e => {
 	Draw.color(Pal.lighterOrange, Pal.lightOrange, e.fin());
-	Lines.stroke()
+	Lines.stroke(1.2 * e.fout())
 	Lines.line(e.x, e.y, e.x + Angles.trnsx(e.rotation, 6 * e.fout()), e.y + Angles.trnsy(e.rotation, 6 * e.fout()))
 	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 3 + e.fout())
 });
