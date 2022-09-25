@@ -65,8 +65,8 @@ const smallHit = new Effect(40, e => {
 		Fill.rect(e.x + x, e.y + y, 3, 3);
 	}});
 	
-	Angles.randLenVectors(e.id, 18, e.finpow() * 25.0, e.rotation, 360.0, hl);
+	Angles.randLenVectors(e.id, 5, e.finpow() * 7.0, e.rotation, 360.0, hl);
 	
-	Lines.square(e.x, e.y, e.finpow() * 6);
+	Lines.square(e.x, e.y, 2 + e.finpow() * 8);
 });
 exports.smallHit = smallHit;
