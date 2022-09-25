@@ -58,3 +58,15 @@ const smallFireShoot = new Effect(20, e => {
 	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 3 * (e.fout() / 2))
 });
 exports.smallFireShoot = smallFireShoot;
+
+const smallHit = new Effect(40, e => {
+	Draw.color(pal.brownLight, pal.brownDark, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 3, 3);
+	}});
+	
+	Angles.randLenVectors(e.id, 18, e.finpow() * 25.0, e.rotation, 360.0, hl);
+	
+	Lines.square(e.x, e.y, e.finpow() * 6);
+});
+exports.smallHit = smallHit;
