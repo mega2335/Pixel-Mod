@@ -6,3 +6,6 @@ exports.second = second;
 
 const bloomRange = 16 * block;
 exports.bloomRange = bloomRange;
+
+const revampRange = 25 * block;
+exports.revampRange = revampRange;
