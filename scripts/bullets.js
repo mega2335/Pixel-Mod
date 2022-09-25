@@ -48,14 +48,14 @@ const needleCopper = extend(BasicBulletType, {
   despawnEffect: Fx.none,
   despawnHit: true,
   damage: 20,
-  lifetime: c.needleRange / 3.5,
-  speed: 3.5,
+  lifetime: c.needleRange / 3,
+  speed: 3,
   pierce: true,
   pierceCap: 2,
   draw(b){
     Draw.color(pal.brownLight)
     Draw.z(Layer.bullet)
-    Drawf.tri(b.x, b.y, 1, 3, b.rotation)
+    Fill.tri(b.x, b.y, 1, 3, b.rotation)
   },
 });
 exports.needleCopper = needleCopper;
