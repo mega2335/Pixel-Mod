@@ -5,7 +5,7 @@ const bloomPixel = extend(BasicBulletType, {
   damage: 37,
   splashDamage: 20,
   splashDamageRadius: 20,
-  lifetime: (c.bloomRange / 3) + (c.block / 2),
+  lifetime: c.bloomRange / 3,
   speed: 3,
   draw(b){
     Draw.color(pal.brownLight)
