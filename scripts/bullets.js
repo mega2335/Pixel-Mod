@@ -40,14 +40,11 @@ const revampPixel = extend(BasicBulletType, {
 });
 exports.revampPixel = revampPixel;
 
-const needleCopper = extend(BasicBulletType, {
+const needleCopper = extend(LaserBoltBulletType, {
   damage: 20,
   lifetime: c.needleRange / 3.5,
   speed: 3.5,
-  draw(b){
-    Draw.color(Pal.bulletYellow);
-    Draw.z(Layer.bullet);
-    Drawf.tri(b.x, b.y, 1.5, 3.5, b.rotation)
-  },
+  pierce: true,
+  pierceCap: 2,
 });
 exports.needleCopper = needleCopper;
