@@ -4,6 +4,9 @@ const ef = require("effects");
 
 const bloomPixel = extend(BasicBulletType, {
   damage: 37,
+  hitEffect: ef.smallHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
   splashDamage: 20,
   splashDamageRadius: 20,
   lifetime: c.bloomRange / 3,
@@ -41,6 +44,10 @@ const revampPixel = extend(BasicBulletType, {
 exports.revampPixel = revampPixel;
 
 const needleCopper = extend(LaserBoltBulletType, {
+  backColor: pal.brownLight,
+  hitEffect: ef.smallHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
   damage: 20,
   lifetime: c.needleRange / 3.5,
   speed: 3.5,
