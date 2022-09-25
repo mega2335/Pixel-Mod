@@ -18,12 +18,14 @@ drawer: {
       blending: additive
       mirror: false
       progress: warmup
+      outline: false
     }
     {
       suffix: "-blade"
-      moveY: 0.8
+      moveY: -1.2
       mirror: true
-      progress: warmup
+      progress: recoil
+      under: true
     }
   ]
 }
