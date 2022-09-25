@@ -1,15 +1,17 @@
 # internal name of the mod
-name: "mindustry-hjson-template"
+name: "pixel-mod"
 
 # displayed name of mod
-displayName: "template"
+displayName: "Pixel Mod"
+
+description: "Adds new tech, based on pixels."
 
 # minimum game version
 minGameVersion: 136
 
 # version of the mod
-version: 0
+version: 1.0
 
 # your github username
-author: "e"
+author: "mega2335"
 
