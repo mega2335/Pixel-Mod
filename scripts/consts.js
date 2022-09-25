@@ -9,3 +9,6 @@ exports.bloomRange = bloomRange;
 
 const revampRange = 25 * block;
 exports.revampRange = revampRange;
+
+const needleRange = 20 * block;
+exports.needleRange = needleRange;
