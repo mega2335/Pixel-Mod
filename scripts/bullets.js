@@ -25,6 +25,9 @@ const revampPixel = extend(BasicBulletType, {
   lifetime: c.revampRange / 3,
   speed: 3,
   healPercent: 3,
+  collidesTeam: true,
+  scaleLife: true,
+  collidesTiles: false,
   draw(b){
     Draw.color(pal.brownLight)
     Draw.z(Layer.bullet)
