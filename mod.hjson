@@ -1,0 +1,15 @@
+# internal name of the mod
+name: "mindustry-hjson-template"
+
+# displayed name of mod
+displayName: "template"
+
+# minimum game version
+minGameVersion: 136
+
+# version of the mod
+version: 0
+
+# your github username
+author: "e"
+
