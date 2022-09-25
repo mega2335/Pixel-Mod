@@ -60,6 +60,7 @@ const smallFireShoot = new Effect(20, e => {
 exports.smallFireShoot = smallFireShoot;
 
 const smallHit = new Effect(40, e => {
+	Lines.stroke(e.fout() * 1.2);
 	Draw.color(pal.brownLight, pal.brownDark, e.fin());
 	const hl = new Floatc2({get: function(x, y){
 		Fill.rect(e.x + x, e.y + y, 3, 3);
