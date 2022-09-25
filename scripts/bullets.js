@@ -64,7 +64,7 @@ const needleLead = extend(BasicBulletType, {
   hitEffect: ef.smallHit,
   despawnEffect: Fx.none,
   despawnHit: true,
-  damage: 20,
+  damage: 35,
   lifetime: c.needleRange / 3,
   speed: 3,
   pierce: true,
