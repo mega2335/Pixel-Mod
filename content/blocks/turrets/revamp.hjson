@@ -1,0 +1,19 @@
+name: "Revamp"
+description: "Fires structure-repairing pixels at all enemies nearby."
+shootSound: laser
+consumes: {
+  power: 1.7
+}
+outlineRadius: 0
+recoil: 2.3
+reload: 60
+minWarmup: 0.85
+shootWarmupSpeed: 0.2
+health: 210
+research: scorch
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  lead/45
+  graphite/65
+]
