@@ -19,3 +19,9 @@ const revampTrail = new Effect(20, e =>{
 	Draw.color(pal.greenLight, pal.greenDark, e.fin());
 	Fill.rect(e.x, e.y, 3.5, 3.5);
 });
+
+const revampHit = new Effect(20, e =>{
+	Draw.color(pal.greenLight, pal.greenDark, e.fin());
+    	Lines.stroke(e.fout() * 2);
+    	Lines.square(e.x, e.y, 4 + e.finpow() * 20);
+});
