@@ -9,7 +9,8 @@ const needle = extend(ItemTurret, "needle", {
   range: c.needleRange,
 });
 needle.ammo(
-  Items.copper, bul.needleCopper
+  Items.copper, bul.needleCopper,
+  Items.lead, bul.needleLead
 )
 exports.needle = needle;
 
