@@ -1,5 +1,0 @@
-type: Block
-destructible: true
-size: 1
-category: effect
-drawCracks: false
