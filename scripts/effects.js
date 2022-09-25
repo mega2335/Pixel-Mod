@@ -27,7 +27,13 @@ const revampHit = new Effect(45, e =>{
     	Lines.stroke(e.fout() * 2);
     	Lines.square(e.x, e.y, 4 + e.finpow() * 20, Time.time * 2);
 	Lines.square(e.x, e.y, 4 + e.finpow() * 20, Time.time * -2);
-	Lines.circle(e.x, e.y, 4 + e.finpow() * 20);
+	Lines.circle(e.x, e.y, 4 + 20);
+	let spikes = 6;
+	let angle = 0;
+	for(let i=0; i<spikes; i++){
+		angle = (360 / spikes) * i;
+		Drawf.tri(e.x + Angles.trnsx(angle, 20), e.y + Angles.trnsy(angle, 20), 5, 5, angle);
+	};
 });
 exports.revampHit = revampHit;
 
@@ -39,9 +45,9 @@ const smallHealShoot = new Effect(50, e => {
 	
 	Angles.randLenVectors(e.id, 8, e.finpow() * 20.0, e.rotation, 30.0, hl);
 	
-	Lines.stroke(e.fout() * 2);
-	Lines.square(e.x, e.y, 2 + e.finpow() * 7, Time.time * 2);
-	Lines.square(e.x, e.y, 2 + e.finpow() * 7, Time.time * -2);
-	Lines.circle(e.x, e.y, 2 + e.finpow() * 7);
+	Lines.stroke(e.fout() * 1.2);
+	Lines.square(e.x, e.y, e.finpow() * 8, Time.time * 2);
+	Lines.square(e.x, e.y, e.finpow() * 8, Time.time * -2);
+	Lines.circle(e.x, e.y, 8);
 });
 exports.smallHealShoot = smallHealShoot;
