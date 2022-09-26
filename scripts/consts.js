@@ -12,3 +12,6 @@ exports.revampRange = revampRange;
 
 const needleRange = 20 * block;
 exports.needleRange = needleRange;
+
+const bladeRange = 33 * block;
+exports.bladeRange = bladeRange;
