@@ -115,12 +115,12 @@ const quarkBullet = extend(BasicBulletType, {
 	damage: 0,
 	splashDamageRadius: 10,
   splashDamage: 50,
-  lifetime: c.quarkRange / 2,
+  lifetime: (c.quarkRange / 2) + c.block / 2,,
   speed: 2,
   draw(b){
     Draw.color(Pal.surge, Pal.redLight, b.fin())
     Draw.z(Layer.bullet)
-	  Lines.stroke(b.fout())
+	  Lines.stroke(0.6 * b.fout())
 	  Lines.circle(b.x, b.y, 3)
     Lines.square(b.x, b.y, 3, Time.time * 1.7)
     Lines.square(b.x, b.y, 3, Time.time * -1.7)
