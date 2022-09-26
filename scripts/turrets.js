@@ -52,6 +52,37 @@ blade.ammo(
 )
 exports.blade = blade;
 
+const knife = extend(PowerTurret, "knife", {
+  shootEffect: ef.bigShoot,
+  smokeEffect: ef.smallSmoke,
+  range: c.knifeRange,
+  setStats(){
+    this.super$setStats();
+    this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bul.knifeBolt)));
+  },
+});
+knife.buildType = () => extend(PowerTurret.PowerTurretBuild, knife, {
+	//reload of attack
+creload : 0,
+    updateTile(){
+        this.super$updateTile();
+        
+        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 129){
+            this.creload = 0
+            //bullet creating
+            bul.bladeLaser.create(this, this.team, this.x, this.y, this.rotation)
+            //shoot sound
+            Sounds.plasmaboom.at(this)
+		//shoot effect
+            ef.smallHit.at(this.x, this.y)
+        }
+        else{
+            if(this.creload < 129){this.creload += 1} 
+        }
+    },
+});
+exports.knife = knife;
+
 const bloom = extend(PowerTurret, "bloom", {
   shootType: bul.bloomPixel,
   shootEffect: ef.smallShoot,
