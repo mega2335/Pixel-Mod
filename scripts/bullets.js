@@ -120,7 +120,7 @@ const quarkBullet = extend(BasicBulletType, {
   draw(b){
     Draw.color(Pal.surge, Pal.redLight, b.fin())
     Draw.z(Layer.bullet)
-	  Lines.stroke(1.2 * b.fout())
+	  Lines.stroke(b.fout())
 	  Lines.circle(b.x, b.y, 3)
     Lines.square(b.x, b.y, 3, Time.time * 1.7)
     Lines.square(b.x, b.y, 3, Time.time * -1.7)
