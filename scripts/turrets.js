@@ -4,7 +4,7 @@ const c = require("consts");
 
 
 const needle = extend(ItemTurret, "needle", {
-  shootEffect: ef.smallFireShoot,
+  shootEffect: ef.smallShoot,
   smokeEffect: Fx.none,
   range: c.needleRange,
 });
@@ -17,7 +17,7 @@ exports.needle = needle;
 const bloom = extend(PowerTurret, "bloom", {
   shootType: bul.bloomPixel,
   shootEffect: ef.smallShoot,
-  smokeEffect: Fx.none,
+  smokeEffect: ef.smallSmoke,
   range: c.bloomRange,
 });
 exports.bloom = bloom;
@@ -25,7 +25,7 @@ exports.bloom = bloom;
 const revamp = extend(PowerTurret, "revamp", {
   shootType: bul.revampPixel,
   shootEffect: ef.smallHealShoot,
-  smokeEffect: Fx.none,
+  smokeEffect: ef.smallHealSmoke,
   range: c.revampRange,
 });
 exports.revamp = revamp;
