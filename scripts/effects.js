@@ -111,3 +111,27 @@ const knifeHit = new Effect(20, e =>{
 	};
 });
 exports.knifeHit = knifeHit;
+
+const knifeTrail = new Effect(20, e =>{
+	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
+	Fill.rect(e.x, e.y, 4, 4);
+});
+exports.knifeTrail = knifeTrail;
+
+const knifeRailHit = new Effect(20, e =>{
+	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
+    	Lines.stroke(e.fout() * 2);
+	Lines.square(e.x, e.y, 4 + e.fout() * 10, Time.time * 2);
+	Lines.square(e.x, e.y, 4 + e.fout() * 10, Time.time * -2);
+	Lines.circle(e.x, e.y, 4 + 10);
+	for(let i=0; i<4; i++){
+		Drawf.tri(e.x, e.y, 3, 50 * e.fout(), 90 * i)
+	};
+});
+exports.knifeRailHit = knifeRailHit;
+
+const knifeRailTrail = new Effect(30, e =>{
+	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
+	Drawf.tri(e.x, e.y, 1.5, 4, e.rotation);
+});
+exports.knifeRailTrail = knifeRailTrail;
