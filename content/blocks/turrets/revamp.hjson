@@ -24,7 +24,7 @@ drawer: {
     }
     {
       suffix: "-blade"
-      moveY: 1
+      moveY: 2.3
       mirror: true
       progress: warmup
       under: true
