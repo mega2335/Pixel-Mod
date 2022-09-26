@@ -88,8 +88,8 @@ const bladeGraphite = extend(BasicBulletType, {
     Draw.color(Pal.darkMetal)
     Draw.z(Layer.bullet)
     Fill.rect(b.x, b.y, 3, 3)
-    Lines.square(b.x, b.y, 2 + b.fout(Interp.slope) * 6, Time.time * 1.7)
-    Lines.square(b.x, b.y, 2 + b.fout(Interp.slope) * 6, Time.time * -1.7)
+    Lines.square(b.x, b.y, 2 + b.fout() * 3, Time.time * 1.7)
+    Lines.square(b.x, b.y, 2 + b.fout() * 3, Time.time * -1.7)
   },
 });
 exports.bladeGraphite = bladeGraphite;
