@@ -1,6 +1,6 @@
 const pal = require("palette");
 
-const smallShoot = new Effect(20, e => {
+const smallShoot = new Effect(15, e => {
 	Draw.color(Pal.lighterOrange, Pal.lightOrange, e.fin());
 	Lines.line(e.x, e.y, e.x + Angles.trnsx(e.rotation, 6 * e.fout()), e.y + Angles.trnsy(e.rotation, 6 * e.fout()))
 	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 3 * (e.fout() / 2))
@@ -44,13 +44,8 @@ const revampHit = new Effect(45, e =>{
 });
 exports.revampHit = revampHit;
 
-const smallHealShoot = new Effect(50, e => {
+const smallHealShoot = new Effect(30, e => {
 	Draw.color(pal.greenLight, pal.greenDark, e.fin());
-	const hl = new Floatc2({get: function(x, y){
-		Fill.rect(e.x + x, e.y + y, 2, 2);
-	}});
-	
-	Angles.randLenVectors(e.id, 8, e.finpow() * 20.0, e.rotation, 30.0, hl);
 	
 	Lines.stroke(e.fout() * 1.2);
 	Lines.square(e.x, e.y, e.finpow() * 8, Time.time * 2);
@@ -58,6 +53,15 @@ const smallHealShoot = new Effect(50, e => {
 	Lines.circle(e.x, e.y, 8);
 });
 exports.smallHealShoot = smallHealShoot;
+
+const smallHealSmoke = new Effect(50, e=> {
+	Draw.color(pal.greenLight, pal.greenDark, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 2, 2);
+	}});
+	
+	Angles.randLenVectors(e.id, 8, e.finpow() * 20.0, e.rotation, 30.0, hl);
+});
 
 const smallHit = new Effect(40, e => {
 	Lines.stroke(e.fout() * 1.2);
