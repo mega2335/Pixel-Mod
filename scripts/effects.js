@@ -17,6 +17,13 @@ const smallSmoke = new Effect(50, e => {
 });
 exports.smallSmoke = smallSmoke;
 
+const bigShoot = new Effect(20, e => {
+	Draw.color(Pal.lighterOrange, Pal.lightOrange, e.fin());
+	Lines.line(e.x, e.y, e.x + Angles.trnsx(e.rotation, 8.5 * e.fout()), e.y + Angles.trnsy(e.rotation, 6 * e.fout()))
+	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 4.5 * (e.fout() / 2))
+});
+exports.bigShoot = bigShoot;
+
 const bloomTrail = new Effect(20, e =>{
 	Draw.color(pal.brownLight, pal.brownDark, e.fin());
 	Fill.rect(e.x, e.y, 2, 2);
