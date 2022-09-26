@@ -91,6 +91,10 @@ const bladeGraphite = extend(BasicBulletType, {
     Lines.square(b.x, b.y, 2 + b.fout() * 7, Time.time * 1.7)
     Lines.square(b.x, b.y, 2 + b.fout() * 7, Time.time * -1.7)
   },
+	lightning: 6,
+	lightningLength: 4,
+	lightningDamage: 45,
+	lightningColor: pal.orangeLight,
 });
 exports.bladeGraphite = bladeGraphite;
 
