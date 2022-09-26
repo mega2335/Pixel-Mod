@@ -68,7 +68,7 @@ creload : 0,
     updateTile(){
         this.super$updateTile();
         
-        if(this.isShooting() && this.isActive() && this.hasAmmo() && /*this.power.status > 0.5 &&*/ this.creload >= 129){
+        if(this.isShooting() && this.isActive() && this.hasAmmo() && /*this.power.status > 0.5 &&*/ this.creload >= 199){
             this.creload = 0
             //bullet creating
             bul.knifeRail.create(this, this.team, this.x, this.y, this.rotation)
@@ -78,7 +78,7 @@ creload : 0,
             ef.smallHit.at(this.x, this.y)
         }
         else{
-            if(this.creload < 129){this.creload += 1} 
+            if(this.creload < 199){this.creload += 1} 
         }
     },
 });
