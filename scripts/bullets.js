@@ -131,3 +131,22 @@ const quarkBullet = extend(BasicBulletType, {
 	lightningColor: Pal.surge,
 });
 exports.quarkBullet = quarkBullet;
+
+const knifePixel = extend(BasicBulletType, {
+	damage: 0,
+  hitEffect: ef.knifeHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  splashDamage: 120,
+  splashDamageRadius: 20,
+  lifetime: c.bloomRange / 3,
+  speed: 3,
+  draw(b){
+    Draw.color(pal.orangeLight)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 4, 4)
+  },
+  trailEffect: ef.knifeTrail,
+  trailInterval: 0.4,
+});
+exports.knifePixel = knifePixel;
