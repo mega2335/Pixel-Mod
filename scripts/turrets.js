@@ -23,7 +23,7 @@ const blade = extend(ItemTurret, "blade", {
     this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bul.bladeLaser)));
   },
 });
-blade.buildType = () => extend(PowerTurret.PowerTurretBuild, blade, {
+blade.buildType = () => extend(ItemTurret.ItemTurretBuild, blade, {
 	//reload of attack
 creload : 0,
 	randX: 0,
