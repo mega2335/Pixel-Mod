@@ -1,0 +1,25 @@
+name: "Knife"
+description: "Fires large pixels and instant bolts at all enemies nearby."
+shootSound: laser
+consumes: {
+  power: 4.6
+}
+shoot: {
+  type: ShootAlternate
+  spread: 3.2
+  shots: 2
+}
+outlineRadius: 0
+recoil: 4.2
+reload: 80
+cooldownTime: 30
+health: 210
+research: blade
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  titanium/60
+  thorium/20
+  graphite/120
+  copper/200
+]
