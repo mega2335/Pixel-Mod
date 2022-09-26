@@ -6,12 +6,11 @@ consumes: {
 }
 shoot: {
   type: ShootAlternate
-  spread: 3.2
-  shots: 2
+  spread: 10
 }
 outlineRadius: 0
 recoil: 4.2
-reload: 80
+reload: 90
 cooldownTime: 30
 health: 210
 research: blade
