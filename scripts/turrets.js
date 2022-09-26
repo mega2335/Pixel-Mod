@@ -71,7 +71,7 @@ creload : 0,
         if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 129){
             this.creload = 0
             //bullet creating
-            bul.bladeLaser.create(this, this.team, this.x, this.y, this.rotation)
+            bul.knifeRail.create(this, this.team, this.x, this.y, this.rotation)
             //shoot sound
             Sounds.plasmaboom.at(this)
 		//shoot effect
