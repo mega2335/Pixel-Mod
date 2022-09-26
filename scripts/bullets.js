@@ -167,4 +167,4 @@ const knifeRail = extend(PointBulletType, {
   trailEffect: ef.knifeRailTrail,
   trailInterval: 4,
 });
-exports.knifePixel = knifePixel;
+exports.knifeRail = knifeRail;
