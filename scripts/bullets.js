@@ -76,3 +76,20 @@ const needleLead = extend(BasicBulletType, {
   },
 });
 exports.needleLead = needleLead;
+
+const bladeGraphite = extend(BasicBulletType, {
+  hitEffect: ef.smallHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  damage: 65,
+  lifetime: c.bladeRange / 2,
+  speed: 2,
+  draw(b){
+    Draw.color(Pal.darkMetal)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 2, 2)
+    Lines.square(b.x, b.y, 2 + b.fout(Interp.slope) * 6, Time.time * 1.7)
+    Lines.square(b.x, b.y, 2 + b.fout(Interp.slope) * 6, Time.time * -1.7)
+  },
+});
+exports.bladeGraphite = bladeGraphite;
