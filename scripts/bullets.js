@@ -153,18 +153,13 @@ exports.knifePixel = knifePixel;
 
 const knifeRail = extend(PointBulletType, {
 	damage: 0,
-  hitEffect: ef.knifeHit,
+  hitEffect: ef.knifeRailHit,
   despawnEffect: Fx.none,
   despawnHit: true,
   splashDamage: 210,
   splashDamageRadius: 10,
   speed: c.knifeRange + (c.block * 1.5),
-  draw(b){
-    Draw.color(pal.orangeLight)
-    Draw.z(Layer.bullet)
-    Fill.rect(b.x, b.y, 4, 4)
-  },
   trailEffect: ef.knifeRailTrail,
-  trailInterval: 4,
+  trailInterval: 2,
 });
 exports.knifeRail = knifeRail;
