@@ -4,7 +4,7 @@ name: "pixel-mod"
 # displayed name of mod
 displayName: "Pixel Mod"
 
-description: "Adds new tech, based on pixels."
+description: "A mod focused on pixels and graphics."
 
 # minimum game version
 minGameVersion: 136
