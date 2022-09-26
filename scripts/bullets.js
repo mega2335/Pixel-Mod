@@ -81,15 +81,27 @@ const bladeGraphite = extend(BasicBulletType, {
   hitEffect: ef.smallHit,
   despawnEffect: Fx.none,
   despawnHit: true,
-  damage: 65,
+  damage: 110,
   lifetime: c.bladeRange / 2,
   speed: 2,
   draw(b){
     Draw.color(Pal.darkMetal)
     Draw.z(Layer.bullet)
-    Fill.rect(b.x, b.y, 2, 2)
+    Fill.rect(b.x, b.y, 3, 3)
     Lines.square(b.x, b.y, 2 + b.fout(Interp.slope) * 6, Time.time * 1.7)
     Lines.square(b.x, b.y, 2 + b.fout(Interp.slope) * 6, Time.time * -1.7)
   },
 });
 exports.bladeGraphite = bladeGraphite;
+
+const bladeLaser = extend(LaserBulletType, {
+	damage: 75,
+	colors: [pal.orangeDark, pal.orangeLight, Color.white],
+	drawSize: 200,
+	width: 25,
+	length: 560,
+  shake: 1,
+  despawnEffect: Fx.smokeCloud,
+  smokeEffect: Fx.none,
+});
+exports.bladeLaser = bladeLaser;
