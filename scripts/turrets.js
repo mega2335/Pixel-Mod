@@ -28,11 +28,11 @@ blade.buildType = () => extend(ItemTurret.ItemTurretBuild, blade, {
 creload : 0,
 	randX: 0,
 	randY: 0,
-	randMax: 4,
+	randMax: 6,
     updateTile(){
         this.super$updateTile();
         
-        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.creload >= 29){
+        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.creload >= 49){
 		this.randX = Mathf.range(-this.randMax, this.randMax)
 		this.randY = Mathf.range(-this.randMax, this.randMax)
             this.creload = 0
@@ -43,7 +43,7 @@ creload : 0,
             
         }
         else{
-            if(this.creload < 29){this.creload += 1} 
+            if(this.creload < 49){this.creload += 1} 
         }
     },
 });
