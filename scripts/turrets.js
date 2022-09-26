@@ -26,22 +26,18 @@ const blade = extend(ItemTurret, "blade", {
 blade.buildType = () => extend(PowerTurret.PowerTurretBuild, blade, {
 	//reload of attack
 creload : 0,
-  trns: new Vec2(),
-  trns2: new Vec2(),
+	randX: 0,
+	randY: 0,
+	randMax: 4,
     updateTile(){
         this.super$updateTile();
         
         if(this.isShooting() && this.isActive() && this.hasAmmo() && this.creload >= 14){
+		this.randX = Mathf.range(-this.randMax, this.randMax)
+		this.randY = Mathf.range(-this.randMax, this.randMax)
             this.creload = 0
-          this.trns2.trns(this.rotation, this.shootY)
-          //vector
-          this.trns.trns(this.rotation, -2)
             //bullet creating
-            bul.bladeLaser.create(this, this.team, (this.x + this.trns.x) + this.trns2.x, (this.y + this.trns.y) + this.trns2.y, this.rotation)
-          //vector
-          this.trns.trns(this.rotation, 2)
-            //bullet creating
-            bul.bladeLaser.create(this, this.team, (this.x + this.trns.x) + this.trns2.x, (this.y + this.trns.y) + this.trns2.y, this.rotation)
+            bul.bladeLaser.create(this, this.team, this.x + this.randX, this.y + this.randY, this.rotation)
             //shoot sound
             Sounds.bigshot.at(this)
             
