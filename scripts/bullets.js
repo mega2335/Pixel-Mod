@@ -158,7 +158,7 @@ const knifeRail = extend(PointBulletType, {
   despawnHit: true,
   splashDamage: 210,
   splashDamageRadius: 10,
-  speed: c.knifeRange + (c.block * 1.5),
+  speed: c.knifeRange,
   trailEffect: ef.knifeRailTrail,
   trailInterval: 2,
 });
