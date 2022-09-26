@@ -132,6 +132,6 @@ exports.knifeRailHit = knifeRailHit;
 
 const knifeRailTrail = new Effect(30, e =>{
 	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
-	Drawf.tri(e.x, e.y, 1.5, 4, e.rotation);
+	Drawf.tri(e.x, e.y, 1.5 * e.fout(), 4, e.rotation);
 });
 exports.knifeRailTrail = knifeRailTrail;
