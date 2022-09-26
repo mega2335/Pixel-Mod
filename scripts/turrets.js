@@ -53,12 +53,13 @@ blade.ammo(
 exports.blade = blade;
 
 const knife = extend(PowerTurret, "knife", {
+	shootType: bul.knifePixel,
   shootEffect: ef.bigShoot,
   smokeEffect: ef.smallSmoke,
   range: c.knifeRange,
   setStats(){
     this.super$setStats();
-    this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bul.knifeBolt)));
+    this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bul.knifeRail)));
   },
 });
 knife.buildType = () => extend(PowerTurret.PowerTurretBuild, knife, {
