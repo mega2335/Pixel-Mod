@@ -32,7 +32,7 @@ creload : 0,
     updateTile(){
         this.super$updateTile();
         
-        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.creload >= 49){
+        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 49){
 		this.randX = Mathf.range(-this.randMax, this.randMax)
 		this.randY = Mathf.range(-this.randMax, this.randMax)
             this.creload = 0
