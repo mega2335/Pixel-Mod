@@ -60,6 +60,14 @@ const bloom = extend(PowerTurret, "bloom", {
 });
 exports.bloom = bloom;
 
+const quark = extend(PowerTurret, "quark", {
+  shootType: bul.quarkBullet,
+  shootEffect: Fx.none,
+  smokeEffect: ef.smallSmoke,
+  range: c.quarkRange,
+});
+exports.quark = quark;
+
 const revamp = extend(PowerTurret, "revamp", {
   shootType: bul.revampPixel,
   shootEffect: ef.smallHealShoot,
