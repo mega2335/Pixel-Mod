@@ -18,3 +18,6 @@ exports.bladeRange = bladeRange;
 
 const quarkRange = 20 * block;
 exports.quarkRange = quarkRange;
+
+const knifeRange = 30 * block;
+exports.knifeRange = knifeRange;
