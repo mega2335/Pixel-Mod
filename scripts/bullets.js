@@ -150,16 +150,3 @@ const knifePixel = extend(BasicBulletType, {
   trailInterval: 0.4,
 });
 exports.knifePixel = knifePixel;
-
-const knifeRail = extend(PointBulletType, {
-	damage: 0,
-  hitEffect: ef.knifeRailHit,
-  despawnEffect: Fx.none,
-  despawnHit: true,
-  splashDamage: 210,
-  splashDamageRadius: 10,
-  speed: c.knifeRange,
-  trailEffect: ef.knifeRailTrail,
-  trailInterval: 2,
-});
-exports.knifeRail = knifeRail;
