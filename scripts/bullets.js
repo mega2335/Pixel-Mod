@@ -85,7 +85,7 @@ const bladeGraphite = extend(BasicBulletType, {
   lifetime: c.bladeRange / 2,
   speed: 2,
   draw(b){
-    Draw.color(pal.orangeLight, pal.orangeDark, Pal.darkMetal, Pal.darkestMetal, b.fin())
+    Draw.color(pal.orangeLight, Pal.darkMetal, b.fin())
     Draw.z(Layer.bullet)
     Fill.rect(b.x, b.y, 3, 3)
     Lines.square(b.x, b.y, 2 + b.fout() * 7, Time.time * 1.7)
