@@ -139,7 +139,7 @@ const knifePixel = extend(BasicBulletType, {
   despawnHit: true,
   splashDamage: 120,
   splashDamageRadius: 20,
-  lifetime: c.bloomRange / 3,
+  lifetime: c.knifeRange / 3,
   speed: 3,
   draw(b){
     Draw.color(pal.orangeLight)
