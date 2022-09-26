@@ -2,8 +2,9 @@ name: "Quark"
 description: "Fires small electron fields at enemies."
 shootSound: spark
 consumes: {
-  power: 1.6
+  power: 1.9
 }
+shootY: 0
 outlineRadius: 0
 recoil: 1.2
 reload: 70
@@ -18,7 +19,7 @@ drawer: {
       suffix: "-sinks"
       heatProgress: recoil
       heatColor: e5666660
-      moveX: -0.3
+      moveX: -1
       progress: warmup
       mirror: true
       outline: false
