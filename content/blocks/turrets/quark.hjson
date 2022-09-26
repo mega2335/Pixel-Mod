@@ -22,7 +22,7 @@ drawer: {
       progress: warmup
       mirror: true
       outline: false
-      under: true
+      layerOffset: -0.03
     }
   ]
 }
