@@ -15,3 +15,6 @@ exports.needleRange = needleRange;
 
 const bladeRange = 33 * block;
 exports.bladeRange = bladeRange;
+
+const quarkRange = 20 * block;
+exports.quarkRange = quarkRange;
