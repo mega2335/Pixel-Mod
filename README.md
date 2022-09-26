@@ -1,2 +1,2 @@
-# MindustryModTemplate
-A template for Mindustry HJSON mods.
+# Pixel Mod
+- haha pixel go brrrrrrt
