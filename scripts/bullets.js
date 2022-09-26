@@ -85,11 +85,11 @@ const bladeGraphite = extend(BasicBulletType, {
   lifetime: c.bladeRange / 2,
   speed: 2,
   draw(b){
-    Draw.color(Pal.darkMetal)
+    Draw.color(pal.orangeLight, Pal.darkMetal, b.fin())
     Draw.z(Layer.bullet)
     Fill.rect(b.x, b.y, 3, 3)
-    Lines.square(b.x, b.y, 2 + b.fout() * 3, Time.time * 1.7)
-    Lines.square(b.x, b.y, 2 + b.fout() * 3, Time.time * -1.7)
+    Lines.square(b.x, b.y, 2 + b.fout() * 5, Time.time * 1.7)
+    Lines.square(b.x, b.y, 2 + b.fout() * 5, Time.time * -1.7)
   },
 });
 exports.bladeGraphite = bladeGraphite;
@@ -97,11 +97,8 @@ exports.bladeGraphite = bladeGraphite;
 const bladeLaser = extend(LaserBulletType, {
 	damage: 75,
 	colors: [pal.orangeDark, pal.orangeLight, Color.white],
-	drawSize: 200,
-	width: 25,
-	length: 560,
-  shake: 1,
-  despawnEffect: Fx.smokeCloud,
+	width: 8,
+	length: 173,
   smokeEffect: Fx.none,
 });
 exports.bladeLaser = bladeLaser;
