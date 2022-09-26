@@ -3,8 +3,8 @@ description: "Fires charged graphite shells and lasers."
 shootSound: laser
 outlineRadius: 0
 recoil: 1.2
-reload: 6
-cooldownTime: 12
+reload: 120
+cooldownTime: 60
 health: 570
 size: 2
 research: needle
