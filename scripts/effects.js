@@ -46,7 +46,7 @@ const revampHit = new Effect(45, e =>{
 	let angle = 0;
 	for(let i=0; i<spikes; i++){
 		angle = (360 / spikes) * i;
-		Drawf.tri(e.x + Angles.trnsx(angle, 24), e.y + Angles.trnsy(angle, 24), 4, 6 * e.fout(), angle);
+		Drawf.tri(e.x + Angles.trnsx(angle, 23.5), e.y + Angles.trnsy(angle, 23.5), 4, 6 * e.fout(), angle);
 	};
 });
 exports.revampHit = revampHit;
