@@ -46,7 +46,7 @@ const revampHit = new Effect(45, e =>{
 	let angle = 0;
 	for(let i=0; i<spikes; i++){
 		angle = (360 / spikes) * i;
-		Drawf.tri(e.x + Angles.trnsx(angle, 23.5), e.y + Angles.trnsy(angle, 23.5), 4, 6 * e.fout(), angle);
+		Drawf.tri(e.x + Angles.trnsx(angle, 23.6), e.y + Angles.trnsy(angle, 23.6), 4, 6 * e.fout(), angle);
 	};
 });
 exports.revampHit = revampHit;
@@ -83,3 +83,18 @@ const smallHit = new Effect(40, e => {
 	Lines.square(e.x, e.y, 2 + e.finpow() * 8);
 });
 exports.smallHit = smallHit;
+
+const quarkHit = new Effect(45, e =>{
+	Draw.color(Pal.surge, Pal.redLight, e.fin());
+    	Lines.stroke(e.fout() * 2);
+    	Lines.square(e.x, e.y, 4 + e.finpow() * 10, Time.time * 2.6);
+	Lines.square(e.x, e.y, 4 + e.finpow() * 10, Time.time * -2.6);
+	Lines.circle(e.x, e.y, 4 + 10);
+	let spikes = 4;
+	let angle = 0;
+	for(let i=0; i<spikes; i++){
+		angle = ((360 / spikes) * i) + 45;
+		Drawf.tri(e.x + Angles.trnsx(angle, 13.6), e.y + Angles.trnsy(angle, 13.6), 4, 6 * e.fout(), angle);
+	};
+});
+exports.quarkHit = quarkHit;
