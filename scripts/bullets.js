@@ -109,7 +109,7 @@ const bladeLaser = extend(LaserBulletType, {
 exports.bladeLaser = bladeLaser;
 
 const quarkBullet = extend(BasicBulletType, {
-  hitEffect: ef.smallHit,
+  hitEffect: ef.quarkHit,
   despawnEffect: Fx.none,
   despawnHit: true,
 	damage: 0,
