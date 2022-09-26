@@ -1,0 +1,35 @@
+name: "Quark"
+description: "Fires small electron fields at enemies."
+shootSound: spark
+consumes: {
+  power: 1.6
+}
+outlineRadius: 0
+recoil: 1.2
+reload: 70
+cooldownTime: 40
+minWarmup: 0.9
+shootWarmupSpeed: 0.12
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: "-sinks"
+      heatProgress: recoil
+      heatColor: e5666660
+      moveX: -0.3
+      progress: warmup
+    }
+  ]
+}
+health: 700
+research: bloom
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  lead/90
+  graphite/100
+  copper/30
+  silicon/60
+]
