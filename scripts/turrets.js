@@ -59,7 +59,7 @@ const knife = extend(PowerTurret, "knife", {
   range: c.knifeRange,
   setStats(){
     this.super$setStats();
-    this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bul.knifeRail)));
+    this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, bul.bladeLaser)));
   },
 });
 knife.buildType = () => extend(PowerTurret.PowerTurretBuild, knife, {
@@ -68,10 +68,10 @@ creload : 0,
     updateTile(){
         this.super$updateTile();
         
-        if(this.isShooting() && this.isActive() && this.hasAmmo() && /*this.power.status > 0.5 &&*/ this.creload >= 199){
+        if(this.isShooting() && this.isActive() && this.hasAmmo() && this.power.status > 0.5 && this.creload >= 199){
             this.creload = 0
             //bullet creating
-            bul.knifeRail.create(this, this.team, this.x, this.y, this.rotation)
+            bul.bladeLaser.create(this, this.team, this.x, this.y, this.rotation)
             //shoot sound
             Sounds.plasmaboom.at(this)
 		//shoot effect
