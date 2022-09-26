@@ -106,8 +106,8 @@ const knifeHit = new Effect(20, e =>{
 	Lines.square(e.x, e.y, 4 + e.fout() * 20, Time.time * -2);
 	Lines.circle(e.x, e.y, 4 + 20);
 	for(let i=0; i<2; i++){
-		Drawf.tri(e.x, e.y, 3, 70 * e.fout(), (90 * i) + Time.time * 2)
-		Drawf.tri(e.x, e.y, 3, 70 * e.fout(), (90 * i) + 90 + Time.time * -2)
+		Drawf.tri(e.x, e.y, 3, 70 * e.fout(), (180 * i) + Time.time * 2)
+		Drawf.tri(e.x, e.y, 3, 70 * e.fout(), (180 * i) + 90 + Time.time * -2)
 	};
 });
 exports.knifeHit = knifeHit;
@@ -117,21 +117,3 @@ const knifeTrail = new Effect(20, e =>{
 	Fill.rect(e.x, e.y, 4, 4);
 });
 exports.knifeTrail = knifeTrail;
-
-const knifeRailHit = new Effect(20, e =>{
-	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
-    	Lines.stroke(e.fout() * 2);
-	Lines.square(e.x, e.y, 4 + e.fout() * 10, Time.time * 2);
-	Lines.square(e.x, e.y, 4 + e.fout() * 10, Time.time * -2);
-	Lines.circle(e.x, e.y, 4 + 10);
-	for(let i=0; i<4; i++){
-		Drawf.tri(e.x, e.y, 3, 50 * e.fout(), 90 * i)
-	};
-});
-exports.knifeRailHit = knifeRailHit;
-
-const knifeRailTrail = new Effect(30, e =>{
-	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
-	Drawf.tri(e.x, e.y, 1.5 * e.fout(), 4, e.rotation);
-});
-exports.knifeRailTrail = knifeRailTrail;
