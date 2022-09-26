@@ -32,7 +32,7 @@ const revampPixel = extend(BasicBulletType, {
   scaleLife: true,
   collidesTiles: false,
   draw(b){
-    Draw.color(pal.brownLight)
+    Draw.color(pal.greenLight)
     Draw.z(Layer.bullet)
     Fill.rect(b.x, b.y, 3.5, 3.5)
   },
