@@ -17,6 +17,7 @@ health: 210
 research: blade
 researchCostMultiplier: 1
 category: turret
+size: 3
 requirements: [
   titanium/60
   thorium/20
