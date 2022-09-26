@@ -1,0 +1,18 @@
+name: "Blade"
+description: "Fires charged graphite shells and lasers."
+shootSound: laser
+outlineRadius: 0
+recoil: 1.2
+reload: 6
+cooldownTime: 12
+health: 570
+size: 2
+research: needle
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  titanium/70
+  lead/100
+  silicon/20
+  graphite/120
+]
