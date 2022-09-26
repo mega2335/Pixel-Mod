@@ -14,3 +14,9 @@ exports.greenLight = greenLight;
 
 const greenDark = col("5acb6f");
 exports.greenDark = greenDark;
+
+const orangeLight = col("ffab78");
+exports.orangeLight = orangeLight;
+
+const orangeDark = col("ff914f");
+exports.orangeDark = orangeDark;
