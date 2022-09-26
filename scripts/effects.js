@@ -1,6 +1,13 @@
 const pal = require("palette");
 
-const smallShoot = new Effect(50, e => {
+const smallShoot = new Effect(20, e => {
+	Draw.color(Pal.lighterOrange, Pal.lightOrange, e.fin());
+	Lines.line(e.x, e.y, e.x + Angles.trnsx(e.rotation, 6 * e.fout()), e.y + Angles.trnsy(e.rotation, 6 * e.fout()))
+	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 3 * (e.fout() / 2))
+});
+exports.smallFireShoot = smallFireShoot;
+
+const smallSmoke = new Effect(50, e => {
 	Draw.color(pal.brownLight, pal.brownDark, e.fin());
 	const hl = new Floatc2({get: function(x, y){
 		Fill.rect(e.x + x, e.y + y, 2, 2);
@@ -51,13 +58,6 @@ const smallHealShoot = new Effect(50, e => {
 	Lines.circle(e.x, e.y, 8);
 });
 exports.smallHealShoot = smallHealShoot;
-
-const smallFireShoot = new Effect(20, e => {
-	Draw.color(Pal.lighterOrange, Pal.lightOrange, e.fin());
-	Lines.line(e.x, e.y, e.x + Angles.trnsx(e.rotation, 6 * e.fout()), e.y + Angles.trnsy(e.rotation, 6 * e.fout()))
-	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 3 * (e.fout() / 2))
-});
-exports.smallFireShoot = smallFireShoot;
 
 const smallHit = new Effect(40, e => {
 	Lines.stroke(e.fout() * 1.2);
