@@ -107,3 +107,27 @@ const bladeLaser = extend(LaserBulletType, {
   smokeEffect: Fx.none,
 });
 exports.bladeLaser = bladeLaser;
+
+const quarkBullet = extend(BasicBulletType, {
+  hitEffect: ef.smallHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+	damage: 0,
+	splashDamageRadius: 10,
+  splashDamage: 50,
+  lifetime: c.quarkRange / 2,
+  speed: 2,
+  draw(b){
+    Draw.color(Pal.surge, Pal.redLight, b.fin())
+    Draw.z(Layer.bullet)
+	  Lines.stroke(1.2 * b.fout())
+	  Lines.circle(b.x, b.y, 3)
+    Lines.square(b.x, b.y, 3, Time.time * 1.7)
+    Lines.square(b.x, b.y, 3, Time.time * -1.7)
+  },
+	lightning: 4,
+	lightningLength: 8,
+	lightningDamage: 30,
+	lightningColor: Pal.surge,
+});
+exports.quarkBullet = quarkBullet;
