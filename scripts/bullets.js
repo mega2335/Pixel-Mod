@@ -115,7 +115,7 @@ const quarkBullet = extend(BasicBulletType, {
 	damage: 0,
 	splashDamageRadius: 10,
   splashDamage: 50,
-  lifetime: (c.quarkRange / 2) + c.block / 2,,
+  lifetime: (c.quarkRange / 2) + c.block / 2,
   speed: 2,
   draw(b){
     Draw.color(Pal.surge, Pal.redLight, b.fin())
