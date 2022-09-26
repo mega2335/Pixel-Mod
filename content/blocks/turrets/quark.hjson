@@ -21,6 +21,8 @@ drawer: {
       moveX: -0.3
       progress: warmup
       mirror: true
+      outline: false
+      under: true
     }
   ]
 }
