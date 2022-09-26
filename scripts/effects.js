@@ -5,7 +5,7 @@ const smallShoot = new Effect(15, e => {
 	Lines.line(e.x, e.y, e.x + Angles.trnsx(e.rotation, 6 * e.fout()), e.y + Angles.trnsy(e.rotation, 6 * e.fout()))
 	Lines.lineAngleCenter(e.x, e.y, e.rotation - 90, 3 * (e.fout() / 2))
 });
-exports.smallFireShoot = smallFireShoot;
+exports.smallShoot = smallShoot;
 
 const smallSmoke = new Effect(50, e => {
 	Draw.color(pal.brownLight, pal.brownDark, e.fin());
@@ -62,6 +62,7 @@ const smallHealSmoke = new Effect(50, e=> {
 	
 	Angles.randLenVectors(e.id, 8, e.finpow() * 20.0, e.rotation, 30.0, hl);
 });
+exports.smallHealSmoke = smallHealSmoke;
 
 const smallHit = new Effect(40, e => {
 	Lines.stroke(e.fout() * 1.2);
