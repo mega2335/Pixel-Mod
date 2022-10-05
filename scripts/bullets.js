@@ -150,3 +150,45 @@ const knifePixel = extend(BasicBulletType, {
   trailInterval: 0.4,
 });
 exports.knifePixel = knifePixel;
+
+const pyroclastCoal = extend(BasicBulletType, {
+  damage: 53,
+  hitEffect: ef.pyroclastHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  splashDamage: 30,
+  splashDamageRadius: 20,
+  lifetime: c.pyroclastRange / 8,
+  speed: 8,
+  draw(b){
+    Draw.color(pal.orangeLight)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 2, 2)
+  },
+  trailEffect: ef.pyroclastTrail,
+  trailInterval: 0.2,
+	statusEffect: StatusEffects.burning,
+	statusDuration: 120,
+});
+exports.pyroclastCoal = pyroclastCoal;
+
+const pyroclastPyra = extend(BasicBulletType, {
+  damage: 97,
+  hitEffect: ef.pyroclastHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  splashDamage: 60,
+  splashDamageRadius: 20,
+  lifetime: c.pyroclastRange / 8,
+  speed: 8,
+  draw(b){
+    Draw.color(pal.orangeLight)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 2, 2)
+  },
+  trailEffect: ef.pyroclastTrail,
+  trailInterval: 0.2,
+	statusEffect: StatusEffects.melting,
+	statusDuration: 90,
+});
+exports.pyroclastPyra = pyroclastPyra;
