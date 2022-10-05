@@ -107,3 +107,14 @@ const revamp = extend(PowerTurret, "revamp", {
   range: c.revampRange,
 });
 exports.revamp = revamp;
+
+const pyroclast = extend(ItemTurret, "pyroclast", {
+  shootEffect: ef.bigShoot,
+  smokeEffect: Fx.none,
+  range: c.pyroclastRange,
+});
+pyroclast.ammo(
+  Items.coal, bul.pyroclastCoal,
+  Items.pyratite, bul.pyroclastPyra
+)
+exports.pyroclast = pyroclast;
