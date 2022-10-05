@@ -123,3 +123,20 @@ const pyroclastTrail = new Effect(7, e =>{
 	Fill.rect(e.x, e.y, 2, 2);
 });
 exports.pyroclastTrail = pyroclastTrail;
+
+const pyroclastHit = new Effect(40, e => {
+	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 1.5, 1.5);
+	}});
+	
+	Angles.randLenVectors(e.id, 5, e.finpow() * 7.0, e.rotation, 360.0, hl);
+	
+	Draw.color(Pal.darkMetal, Pal.darkestMetal, e.fin());
+	const hr = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 3, 3);
+	}});
+	
+	Angles.randLenVectors(e.id, 10, e.finpow() * 8.3, e.rotation, 360.0, hr);
+});
+exports.pyroclastHit = pyroclastHit;
