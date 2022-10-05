@@ -21,3 +21,6 @@ exports.quarkRange = quarkRange;
 
 const knifeRange = 30 * block;
 exports.knifeRange = knifeRange;
+
+const pyroclastRange = 42 * block;
+exports.pyroclastRange = pyroclastRange;
