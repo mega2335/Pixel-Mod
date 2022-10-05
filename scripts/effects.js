@@ -117,3 +117,9 @@ const knifeTrail = new Effect(20, e =>{
 	Fill.rect(e.x, e.y, 4, 4);
 });
 exports.knifeTrail = knifeTrail;
+
+const pyroclastTrail = new Effect(7, e =>{
+	Draw.color(pal.orangeLight, pal.brownDark, e.fin());
+	Fill.rect(e.x, e.y, 2, 2);
+});
+exports.pyroclastTrail = pyroclastTrail;
