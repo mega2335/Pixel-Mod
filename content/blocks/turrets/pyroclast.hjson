@@ -1,6 +1,11 @@
 name: "Pyroclast"
 description: "Launches fire streams at ground enemies over huge distances."
 size: 2
+shoot: {
+  type: ShootAlternate
+  spread: 2.1
+}
+shootY: 0
 shootSound: flame
 outlineRadius: 0
 recoil: 3
