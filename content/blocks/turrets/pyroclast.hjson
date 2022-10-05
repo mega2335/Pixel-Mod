@@ -1,0 +1,17 @@
+name: "Pyroclast"
+description: "Launches fire streams at ground enemies over huge distances."
+size: 2
+shootSound: flame
+outlineRadius: 0
+recoil: 3
+reload: 90
+cooldownTime: 50
+health: 450
+research: scorch
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  lead/70
+  copper/30
+  silicon/20
+]
