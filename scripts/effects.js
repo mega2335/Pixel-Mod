@@ -120,7 +120,11 @@ exports.knifeTrail = knifeTrail;
 
 const pyroclastTrail = new Effect(7, e =>{
 	Draw.color(pal.orangeLight, pal.brownDark, e.fin());
-	Fill.rect(e.x, e.y, 2, 2);
+	const hl = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 2, 2);
+	}});
+	
+	Angles.randLenVectors(e.id, 17, e.finpow() * -10.0, e.rotation, 30, hl);
 });
 exports.pyroclastTrail = pyroclastTrail;
 
@@ -130,13 +134,13 @@ const pyroclastHit = new Effect(40, e => {
 		Fill.rect(e.x + x, e.y + y, 1.5, 1.5);
 	}});
 	
-	Angles.randLenVectors(e.id, 5, e.finpow() * 7.0, e.rotation, 360.0, hl);
+	Angles.randLenVectors(e.id, 17, e.finpow() * 10.0, e.rotation, 360.0, hl);
 	
 	Draw.color(Pal.darkMetal, Pal.darkestMetal, e.fin());
 	const hr = new Floatc2({get: function(x, y){
 		Fill.rect(e.x + x, e.y + y, 3, 3);
 	}});
 	
-	Angles.randLenVectors(e.id, 10, e.finpow() * 8.3, e.rotation, 360.0, hr);
+	Angles.randLenVectors(e.id, 12, e.finpow() * 8.3, e.rotation, 360.0, hr);
 });
 exports.pyroclastHit = pyroclastHit;
