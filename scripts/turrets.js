@@ -118,3 +118,12 @@ pyroclast.ammo(
   Items.pyratite, bul.pyroclastPyra
 )
 exports.pyroclast = pyroclast;
+
+const energy = extend(PowerTurret, "energy", {
+  shootType: bul.energyPixel,
+  shootEffect: Fx.none,
+  smokeEffect: Fx.none,
+  range: c.energyRange,
+});
+energy.shoot.firstShotDelay = ef.energyChargeBegin.lifetime;
+exports.energy = energy;
