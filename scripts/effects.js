@@ -146,7 +146,7 @@ const pyroclastHit = new Effect(40, e => {
 });
 exports.pyroclastHit = pyroclastHit;
 
-const energyChargeBegin = new Effect(90, e => {
+const energyChargeBegin = new Effect(c.energyChargeTime, e => {
 	Draw.color(pal.redLight);
 	const r = [9, 10, 11, 12];
 
@@ -163,7 +163,7 @@ const energyChargeBegin = new Effect(90, e => {
 energyChargeBegin.followParent = true;
 energyChargeBegin.rotWithParent = true;
 
-const energyCharge = new Effect(energyChargeBegin.lifetime, e => {
+const energyCharge = new Effect(c.energyChargeTime, e => {
 	const radius = 10 * c.block;
         const p = [0, 0];
 
