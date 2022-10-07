@@ -27,3 +27,6 @@ exports.pyroclastRange = pyroclastRange;
 
 const energyRange = 25 * block;
 exports.energyRange = energyRange;
+
+const energyChargeTime = 45;
+exports.energyChargeTime = energyChargeTime;
