@@ -144,3 +144,42 @@ const pyroclastHit = new Effect(40, e => {
 	Angles.randLenVectors(e.id, 12, e.finpow() * 8.3, e.rotation, 360.0, hr);
 });
 exports.pyroclastHit = pyroclastHit;
+
+const energyChargeBegin = new Effect(90, e => {
+	Draw.color(pal.redLight);
+	const r = {9, 10, 11, 12};
+
+        e.scaled(60, ee => r[0] *= ee.fin());
+        e.scaled(40, ee => r[1] *= ee.fin());
+        e.scaled(40, ee => r[2] *= ee.fin());
+        e.scaled(60, ee => r[3] *= ee.fin());
+
+        Lines.arc(e.x, e.y, r[0], 0.6, Time.time*8-60);
+        Lines.arc(e.x, e.y, r[1], 0.6, Time.time*5);
+        Lines.arc(e.x, e.y, r[2], 0.4, Time.time*-6+121);
+        Lines.arc(e.x, e.y, r[3], 0.4, Time.time*-4+91);
+});
+energyChargeBegin.followParent = true;
+energyChargeBegin.rotWithParent = true;
+exports.energyChargeBegin = energyChargeBegin;
+
+const energyCharge = new Effect(90, e => {
+	const radius = 10 * 8;
+        const p = {0, 0};
+
+        Angles.randLenVectors(e.id, 3, radius/2 + Interp.pow3Out.apply(1 - e.fout(0.5)) * radius * 1.25, (x, y) => {
+            e.scaled(60, ee => {
+		Draw.color(pal.redLight);
+                ee.scaled(30, e1 =>{
+                    p[0] = Mathf.lerp(x, 0, e1.fin(Interp.pow2));
+                    p[1] = Mathf.lerp(y, 0, e1.fin(Interp.pow2));
+                });
+
+                Lines.stroke(ee.fout(0.5));
+                Lines.line(e.x+x, e.y+y, e.x+p[0], e.y+p[1]);
+            });
+        });
+});
+energyCharge.followParent = true;
+energyCharge.rotWithParent = true;
+exports.energyCharge = energyCharge;
