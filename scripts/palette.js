@@ -20,3 +20,9 @@ exports.orangeLight = orangeLight;
 
 const orangeDark = col("ff914f");
 exports.orangeDark = orangeDark;
+
+const redLight = col("e56666");
+exports.redLight = redLight;
+
+const redDark = col("e64444");
+exports.redDark = redDark;
