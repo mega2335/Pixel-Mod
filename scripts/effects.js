@@ -183,3 +183,9 @@ const energyCharge = new Effect(90, e => {
 energyCharge.followParent = true;
 energyCharge.rotWithParent = true;
 exports.energyCharge = energyCharge;
+
+const energyTrail = new Effect(20, e =>{
+	Draw.color(pal.redLight, pal.redDark, e.fin());
+	Fill.rect(e.x, e.y, 2, 2);
+});
+exports.energyTrail = energyTrail;
