@@ -163,7 +163,7 @@ const energyChargeBegin = new Effect(c.energyChargeTime, e => {
 energyChargeBegin.followParent = true;
 energyChargeBegin.rotWithParent = true;
 
-const energyCharge = new Effect(c.energyChargeTime, e => {
+const energyCharge = new Effect(c.energyChargeTime + 30, e => {
 	const radius = 10 * c.block;
         const p = [0, 0];
 
