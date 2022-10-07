@@ -125,5 +125,5 @@ const energy = extend(PowerTurret, "energy", {
   smokeEffect: Fx.none,
   range: c.energyRange,
 });
-energy.shoot.firstShotDelay = ef.energyChargeBegin.lifetime;
+energy.shoot.firstShotDelay = c.energyChargeTime;
 exports.energy = energy;
