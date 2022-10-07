@@ -204,7 +204,7 @@ const energyPixel = extend(BasicBulletType, {
     Draw.z(Layer.bullet)
     Fill.rect(b.x, b.y, 2, 2)
   },
-  trailEffect: ef.energyPixel,
+  trailEffect: ef.energyTrail,
   trailInterval: 0.2,
   hitEffect: ef.energyHit,
   despawnEffect: Fx.none,
