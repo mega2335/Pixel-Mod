@@ -192,3 +192,24 @@ const pyroclastPyra = extend(BasicBulletType, {
 	statusDuration: 90,
 });
 exports.pyroclastPyra = pyroclastPyra;
+
+const energyPixel = extend(BasicBulletType, {
+  damage: 0,
+  splashDamage: 120,
+  splashDamageRadius: 20,
+  lifetime: c.energyRange / 3,
+  speed: 3,
+  draw(b){
+    Draw.color(pal.redLight)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 2, 2)
+  },
+  trailEffect: ef.energyPixel,
+  trailInterval: 0.2,
+  hitEffect: ef.energyHit,
+  despawnEffect: Fx.none,
+	chargeEffect: ef.energyCharge,
+	chargeBeginEffect: ef.energyChargeBegin,
+	chargeEffects: 7,
+});
+exports.energyPixel = energyPixel;
