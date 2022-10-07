@@ -1,0 +1,21 @@
+name: "Energy"
+description: "Charges and fires explosive pixels."
+shootSound: plasmaboom
+outlineRadius: 0
+recoil: 3.3
+reload: 75
+cooldownTime: 60
+health: 570
+size: 2
+consumes: {
+  power: 8.6
+}
+research: blade
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  titanium/100
+  lead/50
+  copper/65
+  metaglass/30
+]
