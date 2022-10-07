@@ -1,4 +1,5 @@
 const pal = require("palette");
+const c = require("consts");
 
 const smallShoot = new Effect(15, e => {
 	Draw.color(Pal.lighterOrange, Pal.lightOrange, e.fin());
@@ -163,8 +164,8 @@ energyChargeBegin.followParent = true;
 energyChargeBegin.rotWithParent = true;
 exports.energyChargeBegin = energyChargeBegin;
 
-const energyCharge = new Effect(energyChargeBegin.lifetime, e => {
-	const radius = 10 * 8;
+const energyCharge = new Effect(90, e => {
+	const radius = 10 * c.block;
         const p = [0, 0];
 
         Angles.randLenVectors(e.id, 3, radius/2 + Interp.pow3Out.apply(1 - e.fout(0.5)) * radius * 1.25, (x, y) => {
