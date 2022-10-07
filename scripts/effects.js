@@ -162,13 +162,12 @@ const energyChargeBegin = new Effect(90, e => {
 });
 energyChargeBegin.followParent = true;
 energyChargeBegin.rotWithParent = true;
-exports.energyChargeBegin = energyChargeBegin;
 
 const energyCharge = new Effect(energyChargeBegin.lifetime, e => {
 	const radius = 10 * c.block;
         const p = [0, 0];
 
-        Angles.randLenVectors(e.id, 3, radius/2 + Interp.pow3Out.apply(1 - e.fout(0.5)) * radius * 1.25, (x, y) => {
+        Angles.randLenVectors(e.id, 7, radius/2 + Interp.pow3Out.apply(1 - e.fout(0.5)) * radius * 1.25, (x, y) => {
             e.scaled(60, ee => {
 		Draw.color(pal.redLight);
                 ee.scaled(30, e1 =>{
@@ -183,7 +182,7 @@ const energyCharge = new Effect(energyChargeBegin.lifetime, e => {
 });
 energyCharge.followParent = true;
 energyCharge.rotWithParent = true;
-exports.energyCharge = energyCharge;
+exports.energyCharge = new MultiEffect(energyChargeBegin, energyCharge);
 
 const energyTrail = new Effect(20, e =>{
 	Draw.color(pal.redLight, pal.redDark, e.fin());
