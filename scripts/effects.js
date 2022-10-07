@@ -189,3 +189,11 @@ const energyTrail = new Effect(20, e =>{
 	Fill.rect(e.x, e.y, 2, 2);
 });
 exports.energyTrail = energyTrail;
+
+const energyHit = new Effect(60, e =>{
+	Draw.color(pal.redLight, pal.redDark, e.fin());
+    	Lines.stroke(e.fout() * 2);
+	Fill.rect(e.x, e.y, 2, 2);
+	Lines.circle(e.x, e.y, 4 + 20);
+});
+exports.energyHit = energyHit;
