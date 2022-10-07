@@ -147,7 +147,7 @@ exports.pyroclastHit = pyroclastHit;
 
 const energyChargeBegin = new Effect(90, e => {
 	Draw.color(pal.redLight);
-	const r = {9, 10, 11, 12};
+	const r = [9, 10, 11, 12];
 
         e.scaled(60, ee => r[0] *= ee.fin());
         e.scaled(40, ee => r[1] *= ee.fin());
@@ -165,7 +165,7 @@ exports.energyChargeBegin = energyChargeBegin;
 
 const energyCharge = new Effect(energyChargeBegin.lifetime, e => {
 	const radius = 10 * 8;
-        const p = {0, 0};
+        const p = [0, 0];
 
         Angles.randLenVectors(e.id, 3, radius/2 + Interp.pow3Out.apply(1 - e.fout(0.5)) * radius * 1.25, (x, y) => {
             e.scaled(60, ee => {
