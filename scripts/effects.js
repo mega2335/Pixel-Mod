@@ -191,7 +191,7 @@ const energyTrail = new Effect(20, e =>{
 });
 exports.energyTrail = energyTrail;
 
-const energyHit = new Effect(60, e =>{
+const energyHit = new Effect(c.second, e =>{
 	Draw.color(pal.redLight, pal.redDark, e.fin());
     	Lines.stroke(e.fout() * 2);
 	Fill.rect(e.x, e.y, 2, 2);
