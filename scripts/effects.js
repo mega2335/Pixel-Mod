@@ -164,7 +164,7 @@ energyChargeBegin.followParent = true;
 energyChargeBegin.rotWithParent = true;
 exports.energyChargeBegin = energyChargeBegin;
 
-const energyCharge = new Effect(90, e => {
+const energyCharge = new Effect(energyChargeBegin.lifetime, e => {
 	const radius = 10 * c.block;
         const p = [0, 0];
 
