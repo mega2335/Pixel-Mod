@@ -24,3 +24,6 @@ exports.knifeRange = knifeRange;
 
 const pyroclastRange = 42 * block;
 exports.pyroclastRange = pyroclastRange;
+
+const energyRange = 25 * block;
+exports.energyRange = energyRange;
