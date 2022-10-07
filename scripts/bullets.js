@@ -209,7 +209,5 @@ const energyPixel = extend(BasicBulletType, {
   hitEffect: ef.energyHit,
   despawnEffect: Fx.none,
 	chargeEffect: ef.energyCharge,
-	chargeBeginEffect: ef.energyChargeBegin,
-	chargeEffects: 7,
 });
 exports.energyPixel = energyPixel;
