@@ -197,3 +197,50 @@ const energyHit = new Effect(c.second, e =>{
 	Lines.circle(e.x, e.y, 4 + 20);
 });
 exports.energyHit = energyHit;
+
+const strikeMissileShoot = new Effect(30, e =>{
+	e.scaled(11, e=> {
+		Draw.color(pal.orangeLight, pal.brownDark, e.fin());
+		const hl = new Floatc2({get: function(x, y){
+			Fill.rect(e.x + x, e.y + y, 1.2, 1.2);
+		}});
+		
+		Angles.randLenVectors(e.id, 8, e.finpow() * 12.0, 0, 38, hl);
+	})
+	
+	Draw.color(Pal.darkMetal);
+	Fill.rect(e.x, e.y + e.fout() * 2.5, 2.7, 2.7);
+});
+exports.strikeMissileShoot = strikeMissileShoot;
+
+const strikeMissileFall = new Effect(22, e =>{
+	Draw.color(pal.orangeLight, pal.brownDark, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 1.2, 1.2);
+	}});
+	
+	Angles.randLenVectors(e.id, 8, e.finpow() * 12.0, 0, 38, hl);
+	
+	Draw.color(Pal.darkMetal);
+	Fill.rect(e.x, e.y + e.fin() * 2.5, 2.7, 2.7);
+});
+exports.strikeMissileFall = strikeMissileFall;
+
+const strikeMissileHit = new Effect(40, e => {
+	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 1.5, 1.5);
+	}});
+	
+	Angles.randLenVectors(e.id, 20, e.finpow() * 24.0, e.rotation, 360.0, hl);
+	
+	Draw.color(Pal.darkMetal, Pal.darkestMetal, e.fin());
+	const hr = new Floatc2({get: function(x, y){
+		Fill.rect(e.x + x, e.y + y, 3, 3);
+	}});
+	
+	Angles.randLenVectors(e.id, 12, e.finpow() * 17.0, e.rotation, 360.0, hr);
+	
+	Lines.circle(e.x, e.y, 4 + 32 * e.fout());
+});
+exports.strikeMissileHit = strikeMissileHit;
