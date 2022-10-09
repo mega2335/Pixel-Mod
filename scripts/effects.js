@@ -209,13 +209,13 @@ const strikeMissileShoot = new Effect(30, e =>{
 	})
 	
 	Draw.color(Pal.darkMetal, pal.col("000000"), e.fin());
-	Fill.rect(e.x, e.y, 1.8 + e.fin() * 3.2, 1.8 + e.fin() * 3.2);
+	Fill.rect(e.x, e.y, 1.8 + e.fin() * 12, 1.8 + e.fin() * 12);
 });
 exports.strikeMissileShoot = strikeMissileShoot;
 
 const strikeMissileFall = new Effect(22, e =>{
-	Draw.color(Pal.darkMetal, pal.col("000000"), e.fin());
-	Fill.rect(e.x, e.y, 1.8 + e.fout() * 3.2, 1.8 + e.fout() * 3.2);
+	Draw.color(Pal.darkMetal, pal.col("000000"), e.fout());
+	Fill.rect(e.x, e.y, 1.8 + e.fout() * 12, 1.8 + e.fout() * 12);
 });
 exports.strikeMissileFall = strikeMissileFall;
 
