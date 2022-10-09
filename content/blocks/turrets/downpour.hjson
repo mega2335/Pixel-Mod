@@ -1,0 +1,34 @@
+name: "Downpour"
+description: "Launches bursts of missiles into the sky."
+shootSound: missile
+rotateSpeed: 0
+shootCone: 360
+size: 2
+shoot: {
+  type: ShootBarrel
+  barrels: [
+    -4, 4, 0,
+    0, 4, 0,
+    4, 4, 0,
+    -4, 0, 0,
+    4, 0, 0,
+    -4, -4, 0,
+    0, -4, 0,
+    4, -4, 0,
+  ]
+  shots: 3
+  shotDelay: 5
+}
+outlineRadius: 0
+recoil: 0
+reload: 30
+cooldownTime: 65
+health: 530
+research: hail
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  silicon/90
+  copper/40
+  graphite/35
+]
