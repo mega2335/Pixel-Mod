@@ -4,6 +4,7 @@ shootSound: missile
 rotateSpeed: 0
 shootCone: 360
 size: 2
+shootY: 0
 shoot: {
   type: ShootBarrel
   barrels: [
