@@ -139,3 +139,6 @@ const downpour = extend(ItemTurret, "downpour", {
     this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(Items.blastCompound, bul.downpourExplosion)));
   },
 });
+downpour.ammo(
+	Items.blastCompound, bul.downpourTracer
+)
