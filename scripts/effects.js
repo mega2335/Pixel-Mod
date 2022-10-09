@@ -209,20 +209,13 @@ const strikeMissileShoot = new Effect(30, e =>{
 	})
 	
 	Draw.color(Pal.darkMetal);
-	Fill.rect(e.x, e.y + e.fout() * 2.5, 2.7, 2.7);
+	Fill.rect(e.x, e.y + e.fin() * 4, 2.7, 2.7);
 });
 exports.strikeMissileShoot = strikeMissileShoot;
 
 const strikeMissileFall = new Effect(22, e =>{
-	Draw.color(pal.orangeLight, pal.brownDark, e.fin());
-	const hl = new Floatc2({get: function(x, y){
-		Fill.rect(e.x + x, e.y + y, 1.2, 1.2);
-	}});
-	
-	Angles.randLenVectors(e.id, 8, e.finpow() * 12.0, 0, 38, hl);
-	
 	Draw.color(Pal.darkMetal);
-	Fill.rect(e.x, e.y + e.fin() * 2.5, 2.7, 2.7);
+	Fill.rect(e.x, e.y + e.fout() * 5.5, 2.7, 2.7);
 });
 exports.strikeMissileFall = strikeMissileFall;
 
@@ -241,6 +234,6 @@ const strikeMissileHit = new Effect(40, e => {
 	
 	Angles.randLenVectors(e.id, 12, e.finpow() * 17.0, e.rotation, 360.0, hr);
 	
-	Lines.circle(e.x, e.y, 4 + 32 * e.fout());
+	Lines.circle(e.x, e.y, 4 + 32 * e.finpow());
 });
 exports.strikeMissileHit = strikeMissileHit;
