@@ -208,14 +208,14 @@ const strikeMissileShoot = new Effect(30, e =>{
 		Angles.randLenVectors(e.id, 8, e.finpow() * 12.0, 0, 38, hl);
 	})
 	
-	Draw.color(Pal.darkMetal);
-	Fill.rect(e.x, e.y + e.fin() * 4, 2.7, 2.7);
+	Draw.color(Pal.darkMetal, pal.col("000000"), e.fin());
+	Fill.rect(e.x, e.y, 1.8 + e.fin() * 3.2, 1.8 + e.fin() * 3.2);
 });
 exports.strikeMissileShoot = strikeMissileShoot;
 
 const strikeMissileFall = new Effect(22, e =>{
-	Draw.color(Pal.darkMetal);
-	Fill.rect(e.x, e.y + e.fout() * 5.5, 2.7, 2.7);
+	Draw.color(Pal.darkMetal, pal.col("000000"), e.fin());
+	Fill.rect(e.x, e.y, 1.8 + e.fout() * 3.2, 1.8 + e.fout() * 3.2);
 });
 exports.strikeMissileFall = strikeMissileFall;
 
