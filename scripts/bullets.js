@@ -246,8 +246,7 @@ const downpourTracker = extend(BasicBulletType, {
     Lines.lineAngleCenter(b.x, b.y, Time.time * 2, 3)
 	  Lines.lineAngleCenter(b.x, b.y, (Time.time * 2) + 90, 3)
   },
-	despawned(b){
-		downpourExplosion.create(b, b.x, b.y, 0);
-	},
+	fragBullet: downpourExplosion,
+	fragBullets: 1,
 });
 exports.downpourTracker = downpourTracker;
