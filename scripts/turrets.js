@@ -127,3 +127,15 @@ const energy = extend(PowerTurret, "energy", {
 });
 energy.shoot.firstShotDelay = c.energyChargeTime - 10;
 exports.energy = energy;
+
+const downpour = extend(ItemTurret, "downpour", {
+	shootType: bul.downpourTracker,
+  shootEffect: ef.strikeMissileShoot,
+  smokeEffect: Fx.none,
+  range: c.downpourRange,
+  setStats(){
+    this.super$setStats();
+	  this.stats.remove(Stat.ammo)
+    this.stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(Items.blastCompound, bul.downpourExplosion)));
+  },
+});
