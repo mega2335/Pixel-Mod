@@ -211,3 +211,43 @@ const energyPixel = extend(BasicBulletType, {
 	chargeEffect: ef.energyCharge,
 });
 exports.energyPixel = energyPixel;
+
+const downpourExplosion = extend(BasicBulletType, {
+  damage: 0,
+	splashDamage: 95,
+	splashDamageRadius: 32,
+  hitEffect: ef.strikeMissileHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  lifetime: ef.strikeMissileHit.lifetime,
+  speed: 0,
+	keepVelocity: false,
+	collides: false,
+	collidesAir: false,
+	hittable: false,
+  draw(b){},
+});
+exports.downpourExplosion = downpourExplosion;
+
+const downpourTracker = extend(BasicBulletType, {
+  damage: 0,
+  hitEffect: ef.strikeMissileFall,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  lifetime: c.downpourRange / 4.5,
+  speed: 4.5,
+	homingPower: Number.MAX_VALUE,
+	homingRange: 12 * c.block,
+	collidesAir: false,
+	hittable: false,
+  draw(b){
+    Draw.color(pal.redLight)
+    Draw.z(Layer.bullet)
+    Lines.lineAngleCenter(b.x, b.y, Time.time * 2, 3)
+	  Lines.lineAngleCenter(b.x, b.y, (Time.time * 2) + 90, 3)
+  },
+	despawned(b){
+		downpourExplosion.create(b, b.x, b.y, 0);
+	},
+});
+exports.downpourTracker = downpourTracker;
