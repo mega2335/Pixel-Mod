@@ -30,3 +30,6 @@ exports.energyRange = energyRange;
 
 const energyChargeTime = 45;
 exports.energyChargeTime = energyChargeTime;
+
+const downpourRange = 58 * block;
+exports.downpourRange = downpourRange;
