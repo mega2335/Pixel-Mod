@@ -1,5 +1,5 @@
 name: "Downpour"
-description: "Launches bursts of missiles into the sky."
+description: "Rapidly launches missiles into the sky."
 shootSound: missile
 rotateSpeed: 0
 shootCone: 360
@@ -7,22 +7,20 @@ size: 2
 shoot: {
   type: ShootBarrel
   barrels: [
-    -4, 4, 0,
-    0, 4, 0,
-    4, 4, 0,
-    -4, 0, 0,
-    4, 0, 0,
-    -4, -4, 0,
-    0, -4, 0,
-    4, -4, 0,
+    -6, 6, 0,
+    0, 6, 0,
+    6, 6, 0,
+    -6, 0, 0,
+    6, 0, 0,
+    -6, -6, 0,
+    0, -6, 0,
+    6, -6, 0,
   ]
-  shots: 3
-  shotDelay: 5
 }
 outlineRadius: 0
 recoil: 0
-reload: 30
-cooldownTime: 65
+reload: 10
+cooldownTime: 30
 health: 530
 research: hail
 researchCostMultiplier: 1
