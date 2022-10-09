@@ -140,5 +140,5 @@ const downpour = extend(ItemTurret, "downpour", {
   },
 });
 downpour.ammo(
-	Items.blastCompound, bul.downpourTracer
+	Items.blastCompound, bul.downpourTracker
 )
