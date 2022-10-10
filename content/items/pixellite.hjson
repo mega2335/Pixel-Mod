@@ -2,3 +2,4 @@ name: "Pixellite"
 description: "Used in structures and production. Flammable."
 flammability: 0.32
 explosiveness: 0.08
+research: coal
