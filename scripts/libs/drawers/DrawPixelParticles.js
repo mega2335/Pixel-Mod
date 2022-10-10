@@ -35,7 +35,7 @@ exports.newDrawer = function newDrawer(obj){
         }
     }
     },
-  });
+  }, obj);
   
   return extend(DrawBlock, newObj);
 };
