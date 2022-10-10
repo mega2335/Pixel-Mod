@@ -1,0 +1,15 @@
+name: "Pixellite Press"
+description: "Uses heat and pressure to fuse copper, coal, and scrap into pixellite."
+consumes: {
+  power: 3.5
+  items: {
+    items: [
+      coal/1
+      scrap/4
+      copper/2
+    ]
+  }
+}
+outputItem: pixellite/2
+size: 2
+research: graphite-press
