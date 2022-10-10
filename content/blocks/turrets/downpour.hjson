@@ -1,5 +1,5 @@
 name: "Downpour"
-description: "Rapidly launches missiles into the sky."
+description: "Launches missiles into the sky."
 shootSound: missile
 rotateSpeed: 0
 shootCone: 360
@@ -17,11 +17,13 @@ shoot: {
     0, -6, 0,
     6, -6, 0
   ]
+  shots: 2
+  shotDelay: 5
 }
 outlineRadius: 0
 recoil: 0
-reload: 10
-cooldownTime: 30
+reload: 60
+cooldownTime: 20
 health: 530
 research: hail
 researchCostMultiplier: 1
