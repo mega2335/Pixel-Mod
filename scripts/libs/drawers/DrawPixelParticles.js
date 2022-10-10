@@ -1,19 +1,4 @@
-const pal = require("palette");
-
-function newDrawer(obj){
-  if(obj = undefined){
-    obj = {
-      color: pal.brownLight,
-      particles: 30,
-      particleLife: 70,
-      particleRad: 7,
-      particleSize: 3,
-      reverse: false,
-      interp: new PowIn(1.5),
-      alpha: 0.5,
-      blending: Blending.normal,
-    };
-  };
+exports.newDrawer = function newDrawer(obj){
   const color = obj.color;
   const particles = obj.particles
   const particleLife = obj.particleLife, particleRad = obj.particleRad, particleSize = obj.particleSize;
@@ -22,7 +7,7 @@ function newDrawer(obj){
   const alpha = obj.alpha;
   const blending = obj.blending;
   
-  const newObj = {
+  const newObj = Object.assign({
     draw(build){
       if(build.warmup() > 0){
 
@@ -50,7 +35,7 @@ function newDrawer(obj){
         }
     }
     },
-  };
+  });
   
   return extend(DrawBlock, newObj);
 };
