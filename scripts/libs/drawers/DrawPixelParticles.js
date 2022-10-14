@@ -17,9 +17,10 @@ exports.newDrawer = function(obj){
             const base = (Time.time / particleLife);
             rand.setSeed(build.id);
             for(let i = 0; i < particles; i++){
-                const fin = (rand.random(2) + base) % 1;
+                const fin = (Mathf.rand(2) + base) % 1;
                 if(reverse) fin = 1 - fin;
                 const fout = 1 - fin;
+                const angle = Mathf.rand(360);
                 const len = particleRad * interp.apply(fout);
                 Draw.alpha(a);
                 Fill.rect(
