@@ -1,3 +1,4 @@
+const DrawPixelParticles = require("libs/drawers/DrawPixelParticles");
 const pal = require("palette");
 const c = require("consts");
 const ef = require("effects");
