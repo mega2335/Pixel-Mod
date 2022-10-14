@@ -33,7 +33,7 @@ exports.newDrawer = function(obj){
         }
     }
     },
-  }, obj);
+  }, newObj);
   
   return extend(DrawBlock, newObj);
 };
