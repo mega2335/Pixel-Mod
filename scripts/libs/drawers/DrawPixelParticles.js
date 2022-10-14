@@ -1,5 +1,17 @@
 exports.newDrawer = function newDrawer(obj){
-  obj = Object.assign(obj, obj);
+  if(obj == undefined){
+    obj = Object.assign({
+      color: Color.valueOf("e56666"),
+      particles: 30,
+      particleLife: 40,
+      particleRad: 3,
+      particleSize: 1.2,
+      reverse: false,
+      interp: Interp.powIn(1.2),
+      alpha: 0.8,
+      blending: Blending.normal,
+    }, obj);
+  };
   const color = obj.color;
   const particles = obj.particles
   const particleLife = obj.particleLife, particleRad = obj.particleRad, particleSize = obj.particleSize;
