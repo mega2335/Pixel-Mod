@@ -15,7 +15,7 @@ exports.newDrawer = function(obj){
             Draw.blend(blending);
             Draw.color(color);
             const base = (Time.time / particleLife);
-            rand.setSeed(build.id);
+            Mathf.setSeed(build.id);
             for(let i = 0; i < particles; i++){
                 const fin = (Mathf.rand(2) + base) % 1;
                 if(reverse) fin = 1 - fin;
