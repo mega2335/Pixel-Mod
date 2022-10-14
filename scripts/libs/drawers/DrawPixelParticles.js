@@ -10,8 +10,8 @@ exports.newDrawer = function(obj){
   
   const drawer = extend(DrawBlock, {
     draw(build){
-      if(build.warmup() > 0){
-            const a = alpha * build.warmup();
+      if(build.warmup > 0){
+            const a = alpha * build.warmup;
             Draw.blend(blending);
             Draw.color(color);
             const base = (Time.time / particleLife);
