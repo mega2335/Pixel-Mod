@@ -8,7 +8,7 @@ exports.newDrawer = function(obj){
   const alpha = obj.alpha;
   const blending = obj.blending;
   
-  const newObj = {
+  const drawer = extend(DrawBlock, {
     draw(build){
       if(build.warmup() > 0){
             const a = alpha * build.warmup();
@@ -33,7 +33,7 @@ exports.newDrawer = function(obj){
         }
     }
     },
-  };
+  });
   
-  return extend(DrawBlock, newObj);
+  return drawer;
 };
