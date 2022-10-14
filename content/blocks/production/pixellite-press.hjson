@@ -10,6 +10,28 @@ consumes: {
     ]
   }
 }
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: "-bottom"
+    }
+    {
+      type: DrawParticles
+      color: ffab78
+      reverse: true
+      particleLife: 25
+      particles: 20
+      particleSize: 2
+      particleRad: 3.3
+    }
+    {
+      type: DrawRegion
+      suffix: "-top"
+    }
+  ]
+}
 outputItem: pixellite/2
 size: 2
 research: graphite-press
