@@ -31,8 +31,7 @@ exports.newDrawer = function(obj){
             Draw.blend();
             Draw.reset();
         }
-    }
-    },
+      },
   });
   
   return drawer;
