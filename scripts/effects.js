@@ -237,3 +237,24 @@ const strikeMissileHit = new Effect(40, e => {
 	Lines.circle(e.x, e.y, 4 + 32 * e.finpow());
 });
 exports.strikeMissileHit = strikeMissileHit;
+
+const blastHit = new Effect(40, e => {
+	Draw.color(Color.white, pal.redLight, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		const ang = Mathf.angle(x, y);
+		Drawf.tri(e.x, e.y, 3 * e.fout(), 12.0 * e.finpow(), ang)
+	}});
+	
+	Angles.randLenVectors(e.id, 20, e.finpow() * 13.0, e.rotation, 60.0, hl);
+	
+	Draw.color(pal.redLight, Pal.redLight, e.fin());
+	const hr = new Floatc2({get: function(x, y){
+		const ang = Mathf.angle(x, y);
+		Lines.lineAngle(e.x + x, e.y + y, ang, 3.0 * e.fout())
+	}});
+	
+	Angles.randLenVectors(e.id, 20, e.finpow() * 24.0, e.rotation, 360.0, hr);
+	
+	Lines.circle(e.x, e.y, 4 + 20 * e.finpow());
+});
+exports.blastHit = blastHit;
