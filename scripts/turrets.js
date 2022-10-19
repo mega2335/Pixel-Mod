@@ -128,7 +128,7 @@ const energy = extend(PowerTurret, "energy", {
 energy.shoot.firstShotDelay = c.energyChargeTime - 10;
 exports.energy = energy;
 
-const downpour = extend(ItemTurret, "downpour", {
+const downpour = extend(ItemTurret, "blast", {
   shootEffect: ef.strikeMissileShoot,
   smokeEffect: Fx.none,
   range: c.downpourRange,
