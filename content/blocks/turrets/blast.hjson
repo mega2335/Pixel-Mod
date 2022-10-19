@@ -1,0 +1,16 @@
+name: "Blast"
+description: "Fires small explosive bullets at all enemies nearby."
+shootSound: bang
+outlineRadius: 0
+recoil: 2.3
+reload: 50
+cooldownTime: 65
+health: 210
+research: scorch
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  lead/70
+  copper/65
+  silicon/20
+]
