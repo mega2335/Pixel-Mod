@@ -253,7 +253,7 @@ exports.downpourTracker = downpourTracker;
 
 const blastBullet = extend(BasicBulletType, {
   damage: 0,
-  hitEffect: ef.smallHit,
+  hitEffect: ef.blastHit,
   despawnEffect: Fx.none,
   despawnHit: true,
   splashDamage: 70,
