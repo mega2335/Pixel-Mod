@@ -250,3 +250,20 @@ const downpourTracker = extend(BasicBulletType, {
 	fragBullets: 1,
 });
 exports.downpourTracker = downpourTracker;
+
+const blastBullet = extend(BasicBulletType, {
+  damage: 0,
+  hitEffect: ef.smallHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  splashDamage: 70,
+  splashDamageRadius: 20,
+  lifetime: c.blastRange / 3,
+  speed: 3,
+  draw(b){
+    Draw.color(pal.redLight)
+    Draw.z(Layer.bullet)
+    Fill.rect(b.x, b.y, 2, 2)
+  },
+});
+exports.blastBullet = blastBullet;
