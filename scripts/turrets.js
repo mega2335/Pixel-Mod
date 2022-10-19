@@ -129,7 +129,6 @@ energy.shoot.firstShotDelay = c.energyChargeTime - 10;
 exports.energy = energy;
 
 const downpour = extend(ItemTurret, "downpour", {
-	shootType: bul.downpourTracker,
   shootEffect: ef.strikeMissileShoot,
   smokeEffect: Fx.none,
   range: c.downpourRange,
@@ -141,4 +140,13 @@ const downpour = extend(ItemTurret, "downpour", {
 });
 downpour.ammo(
 	Items.blastCompound, bul.downpourTracker
+)
+
+const blast = extend(ItemTurret, "downpour", {
+  shootEffect: ef.blastShoot,
+  smokeEffect: Fx.none,
+  range: c.blastRange,
+});
+blast.ammo(
+	Items.blastCompound, bul.blastBullet
 )
