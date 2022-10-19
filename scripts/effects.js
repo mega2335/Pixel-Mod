@@ -258,3 +258,16 @@ const blastHit = new Effect(40, e => {
 	Lines.circle(e.x, e.y, 4 + 20 * e.finpow());
 });
 exports.blastHit = blastHit;
+
+const blastShoot = new Effect(40, e => {
+	Draw.color(Color.white, pal.redLight, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		const ang = Mathf.angle(x, y);
+		Drawf.tri(e.x, e.y, 3 * e.fout(), 12.0 * e.finpow(), ang)
+	}});
+	
+	Angles.randLenVectors(e.id, 20, e.finpow() * 13.0, e.rotation, 45.0, hl);
+	
+	Lines.circle(e.x, e.y, 4 + 7 * e.finpow());
+});
+exports.blastShoot = blastShoot;
