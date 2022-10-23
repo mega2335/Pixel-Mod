@@ -150,3 +150,10 @@ const blast = extend(ItemTurret, "blast", {
 blast.ammo(
 	Items.blastCompound, bul.blastBullet
 )
+
+const speed = extend(PowerTurret, "speed", {
+  shootEffect: ef.speedShoot,
+  smokeEffect: Fx.none,
+  range: c.speedRange,
+	shootType: bul.speedOrb,
+});
