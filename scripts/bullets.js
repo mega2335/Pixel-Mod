@@ -280,7 +280,7 @@ const speedOrb = extend(BasicBulletType, {
   draw(b){
     Draw.color(pal.redLight)
     Draw.z(Layer.bullet)
-    Lines.circle(b.x, b.y, 6)
+    Lines.circle(b.x, b.y, 2)
   },
 	trailEffect: ef.speedTrail,
 	trailSpacing: 0.4,
