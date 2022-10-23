@@ -291,6 +291,7 @@ exports.speedHit = speedHit;
 
 const speedTrail = new Effect(30, e=>{
 	Draw.color(pal.redLight, pal.redDark, e.fin())
-    	Lines.circle(e.x, e.y, 6 * e.fout())
+	Lines.stroke(1 * e.fout())
+    	Lines.circle(e.x, e.y, 2 * e.fout())
 });
 exports.speedTrail = speedTrail;
