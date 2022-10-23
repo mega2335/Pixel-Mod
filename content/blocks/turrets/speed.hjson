@@ -12,23 +12,24 @@ consumes: {
 }
 shoot: {
   type: ShootPattern
-  shots: 3
-  shotDelay: 5
+  shots: 5
+  shotDelay: 3
 }
 drawer: {
   type: DrawTurret
   parts: [
     {
       type: RegionPart
-      progress: reload
+      suffix: "-blaster"
+      progress: recoil
       moveY: -1.5
     }
     {
       type: FlarePart
-      progress: reload
+      progress: warmup
       color1: e56666
       radius: 0
-      radiusTo: 5
+      radiusTo: 3
     }
   ]
 }
