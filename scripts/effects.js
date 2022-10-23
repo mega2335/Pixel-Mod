@@ -288,3 +288,9 @@ const speedHit = new Effect(30, e => {
 	Angles.randLenVectors(e.id, 25, 4 + e.finpow() * 20.0, e.rotation, 360.0, hl);
 });
 exports.speedHit = speedHit;
+
+const speedTrail = new Effect(30, e=>{
+	Draw.color(pal.redLight, pal.redDark, e.fin())
+    	Lines.circle(e.x, e.y, 6 * e.fout())
+});
+exports.speedTrail = speedTrail;
