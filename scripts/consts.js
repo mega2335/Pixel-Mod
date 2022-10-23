@@ -36,3 +36,6 @@ exports.downpourRange = downpourRange;
 
 const blastRange = 30 * block;
 exports.blastRange = blastRange;
+
+const speedRange = 25 * block;
+exports.speedRange = speedRange;
