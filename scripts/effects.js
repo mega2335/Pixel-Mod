@@ -198,26 +198,15 @@ const energyHit = new Effect(c.second, e =>{
 });
 exports.energyHit = energyHit;
 
-const strikeMissileShoot = new Effect(30, e =>{
-	e.scaled(11, e=> {
+const strikeMissileShoot = new Effect(11, e =>{
 		Draw.color(pal.orangeLight, pal.brownDark, e.fin());
 		const hl = new Floatc2({get: function(x, y){
 			Fill.rect(e.x + x, e.y + y, 1.2, 1.2);
 		}});
 		
-		Angles.randLenVectors(e.id, 8, e.finpow() * 12.0, 0, 38, hl);
-	})
-	
-	Draw.color(Pal.darkMetal, pal.col("000000"), e.fin());
-	Fill.rect(e.x, e.y, 1.8 + e.fin() * 12, 1.8 + e.fin() * 12);
+		Angles.randLenVectors(e.id, 8, e.finpow() * 12.0, -90, 38, hl);
 });
 exports.strikeMissileShoot = strikeMissileShoot;
-
-const strikeMissileFall = new Effect(22, e =>{
-	Draw.color(Pal.darkMetal, pal.col("000000"), e.fout());
-	Fill.rect(e.x, e.y, 1.8 + e.fout() * 12, 1.8 + e.fout() * 12);
-});
-exports.strikeMissileFall = strikeMissileFall;
 
 const strikeMissileHit = new Effect(40, e => {
 	Draw.color(pal.orangeLight, Pal.redLight, e.fin());
@@ -269,3 +258,33 @@ const blastShoot = new Effect(40, e => {
 	Angles.randLenVectors(e.id, 20, e.finpow() * 8.0, e.rotation, 45.0, hl);
 });
 exports.blastShoot = blastShoot;
+
+const speedShoot = new Effect(17, e => {
+	Draw.color(Color.white, pal.redLight, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		const ang = Mathf.angle(x, y);
+		Lines.lineAngle(e.x + x, e.y + y, ang, 3.0 * e.fout())
+	}});
+	
+	Angles.randLenVectors(e.id, 30, e.finpow() * 9.5, e.rotation, 25.0, hl);
+	
+	Draw.color(Color.redLight, pal.redDark, e.fin());
+	const hr = new Floatc2({get: function(x, y){
+		const ang = Mathf.angle(x, y);
+		Lines.lineAngle(e.x + x, e.y + y, ang, 3.0 * e.fout())
+	}});
+	
+	Angles.randLenVectors(e.id, 15, e.finpow() * 3.5, e.rotation, 90.0, hr);
+});
+exports.speedShoot = speedShoot;
+
+const speedHit = new Effect(30, e => {
+	Draw.color(Color.white, pal.redLight, e.fin());
+	const hl = new Floatc2({get: function(x, y){
+		const ang = Mathf.angle(x, y);
+		Lines.lineAngle(e.x + x, e.y + y, ang, 3.0 * e.fout())
+	}});
+	
+	Angles.randLenVectors(e.id, 25, 4 + e.finpow() * 20.0, e.rotation, 360.0, hl);
+});
+exports.speedHit = speedHit;
