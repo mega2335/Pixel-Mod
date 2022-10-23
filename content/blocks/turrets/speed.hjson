@@ -1,0 +1,41 @@
+name: "Speed"
+description: "Launches fast energy orbs."
+shootSound: laser
+outlineRadius: 0
+recoil: 0
+reload: 35
+cooldownTime: 45
+health: 300
+shootY: 0
+consumes: {
+  power: 3
+}
+shoot: {
+  type: ShootPattern
+  shots: 3
+  shotDelay: 5
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      progress: reload
+      moveY: -1.5
+    }
+    {
+      type: FlarePart
+      progress: reload
+      color1: e56666
+      sides: 8
+      radius: 10
+    }
+  ]
+}
+research: needle
+researchCostMultiplier: 1
+category: turret
+requirements: [
+  titanium/100
+  metaglass/30
+]
