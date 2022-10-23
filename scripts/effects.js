@@ -268,7 +268,7 @@ const speedShoot = new Effect(17, e => {
 	
 	Angles.randLenVectors(e.id, 30, e.finpow() * 9.5, e.rotation, 25.0, hl);
 	
-	Draw.color(Color.redLight, pal.redDark, e.fin());
+	Draw.color(pal.redLight, pal.redDark, e.fin());
 	const hr = new Floatc2({get: function(x, y){
 		const ang = Mathf.angle(x, y);
 		Lines.lineAngle(e.x + x, e.y + y, ang, 3.0 * e.fout())
