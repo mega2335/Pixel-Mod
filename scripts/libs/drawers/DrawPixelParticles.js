@@ -1,5 +1,5 @@
-exports.newDrawer = function(obj){
-  obj = Object.assign(obj, obj);
+exports.newDrawer = function(v){
+  const obj = Object.assign(v, {});
   const color = obj.color;
   const particles = obj.particles
   const particleLife = obj.particleLife, particleRad = obj.particleRad, particleSize = obj.particleSize;
