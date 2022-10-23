@@ -219,7 +219,7 @@ const downpourExplosion = extend(BasicBulletType, {
   hitEffect: ef.strikeMissileHit,
   despawnEffect: Fx.none,
   despawnHit: true,
-  lifetime: ef.strikeMissileHit.lifetime,
+  lifetime: 0,
   speed: 0,
 	keepVelocity: false,
 	collides: false,
@@ -231,7 +231,7 @@ exports.downpourExplosion = downpourExplosion;
 
 const downpourTracker = extend(BasicBulletType, {
   damage: 0,
-  hitEffect: ef.strikeMissileFall,
+  hitEffect: Fx.none,
   despawnEffect: Fx.none,
   despawnHit: true,
   lifetime: c.downpourRange / 4.5,
@@ -267,3 +267,22 @@ const blastBullet = extend(BasicBulletType, {
   },
 });
 exports.blastBullet = blastBullet;
+
+const speedOrb = extend(BasicBulletType, {
+  damage: 100,
+  hitEffect: ef.speedHit,
+  despawnEffect: Fx.none,
+  despawnHit: true,
+  lifetime: c.speedRange / 8,
+  speed: 8,
+	pierce: true,
+	pierceCap: 3,
+  draw(b){
+    Draw.color(pal.redLight)
+    Draw.z(Layer.bullet)
+    Lines.circle(b.x, b.y, 6)
+  },
+	trailEffect: ef.speedTrail,
+	trailSpacing: 0.4,
+});
+exports.speedOrb = speedOrb;
