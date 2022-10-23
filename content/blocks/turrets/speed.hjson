@@ -27,8 +27,8 @@ drawer: {
       type: FlarePart
       progress: reload
       color1: e56666
-      sides: 8
-      radius: 10
+      radius: 0
+      radiusTo: 5
     }
   ]
 }
